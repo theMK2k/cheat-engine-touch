@@ -1,22 +1,23 @@
 object frmBreakpointCondition: TfrmBreakpointCondition
-  Left = 666
-  Height = 232
-  Top = 334
-  Width = 489
+  Left = 355
+  Height = 253
+  Top = 152
+  Width = 645
   Caption = 'Breakpoint condition'
-  ClientHeight = 232
-  ClientWidth = 489
+  ClientHeight = 253
+  ClientWidth = 645
+  Font.Height = -16
   OnCreate = FormCreate
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object Button1: TButton
     AnchorSideTop.Control = PageControl1
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 8
     Height = 27
-    Top = 202
+    Top = 223
     Width = 75
     Anchors = [akLeft, akBottom]
     BorderSpacing.Bottom = 3
@@ -30,7 +31,7 @@ object frmBreakpointCondition: TfrmBreakpointCondition
     AnchorSideBottom.Side = asrBottom
     Left = 96
     Height = 27
-    Top = 202
+    Top = 223
     Width = 75
     Anchors = [akLeft, akBottom]
     Cancel = True
@@ -44,26 +45,26 @@ object frmBreakpointCondition: TfrmBreakpointCondition
     AnchorSideTop.Side = asrBottom
     AnchorSideBottom.Control = Button1
     Left = 8
-    Height = 177
-    Top = 20
-    Width = 476
-    ActivePage = TabSheet1
+    Height = 192
+    Top = 26
+    Width = 632
+    ActivePage = TabSheet2
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Bottom = 5
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 2
     object TabSheet1: TTabSheet
       Caption = 'Easy formula'
-      ClientHeight = 149
-      ClientWidth = 468
+      ClientHeight = 131
+      ClientWidth = 624
       object edtEasy: TEdit
         AnchorSideLeft.Control = Label2
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 4
-        Height = 23
-        Top = 37
-        Width = 459
+        Height = 29
+        Top = 49
+        Width = 615
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 2
         TabOrder = 0
@@ -74,9 +75,9 @@ object frmBreakpointCondition: TfrmBreakpointCondition
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 4
-        Height = 15
+        Height = 21
         Top = 5
-        Width = 460
+        Width = 616
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 4
         BorderSpacing.Top = 5
@@ -92,9 +93,9 @@ object frmBreakpointCondition: TfrmBreakpointCondition
         AnchorSideRight.Control = TabSheet1
         AnchorSideRight.Side = asrBottom
         Left = 4
-        Height = 15
-        Top = 20
-        Width = 460
+        Height = 21
+        Top = 26
+        Width = 616
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 4
         Caption = 'Example: EAX == 0x1234  (case sensitive and hexadecimal starts with 0x ) (Lua)'
@@ -104,13 +105,13 @@ object frmBreakpointCondition: TfrmBreakpointCondition
     end
     object TabSheet2: TTabSheet
       Caption = 'Complex function'
-      ClientHeight = 149
-      ClientWidth = 468
+      ClientHeight = 158
+      ClientWidth = 624
       object mComplex: TMemo
         Left = 0
-        Height = 149
+        Height = 158
         Top = 0
-        Width = 468
+        Width = 624
         Align = alClient
         Lines.Strings = (
           '--the register values like EAX and EBX can be read here. '
@@ -128,9 +129,9 @@ object frmBreakpointCondition: TfrmBreakpointCondition
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     Left = 8
-    Height = 19
+    Height = 25
     Top = 1
-    Width = 43
+    Width = 51
     BorderSpacing.Left = 8
     BorderSpacing.Top = 1
     Caption = 'Easy'
@@ -144,10 +145,10 @@ object frmBreakpointCondition: TfrmBreakpointCondition
     AnchorSideLeft.Control = rbEasy
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = rbEasy
-    Left = 56
-    Height = 19
+    Left = 64
+    Height = 25
     Top = 1
-    Width = 67
+    Width = 81
     BorderSpacing.Left = 5
     Caption = 'Complex'
     OnChange = rbEasyChange

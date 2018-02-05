@@ -1104,7 +1104,7 @@ begin
   if savedialog1.Execute then
   begin
     mscript.lines.SaveToFile(savedialog1.filename);
-    frmLuaEngine.Caption:=rsLuaEngine+' '+ExtractFileNameOnly(savedialog1.filename);
+    frmLuaEngine.Caption:=rsLuaEngine+' '+FileUtil.ExtractFileNameWithoutExt(savedialog1.filename);
   end;
 end;
 

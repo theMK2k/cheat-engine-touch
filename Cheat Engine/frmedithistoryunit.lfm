@@ -1,20 +1,21 @@
 object frmEditHistory: TfrmEditHistory
-  Left = 549
-  Height = 326
-  Top = 208
-  Width = 320
+  Left = 440
+  Height = 367
+  Top = 144
+  Width = 467
   Caption = 'Write log'
-  ClientHeight = 326
-  ClientWidth = 320
+  ClientHeight = 367
+  ClientWidth = 467
+  Font.Height = -16
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object lvWriteLog: TListView
     Left = 0
-    Height = 238
+    Height = 255
     Top = 0
-    Width = 320
+    Width = 467
     Align = alClient
     Columns = <    
       item
@@ -40,14 +41,14 @@ object frmEditHistory: TfrmEditHistory
   end
   object Panel1: TPanel
     Left = 0
-    Height = 88
-    Top = 238
-    Width = 320
+    Height = 112
+    Top = 255
+    Width = 467
     Align = alBottom
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 88
-    ClientWidth = 320
+    ClientHeight = 112
+    ClientWidth = 467
     TabOrder = 1
     object Button1: TButton
       AnchorSideLeft.Control = Panel1
@@ -56,10 +57,10 @@ object frmEditHistory: TfrmEditHistory
       AnchorSideTop.Side = asrBottom
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
-      Left = 123
-      Height = 25
-      Top = 60
-      Width = 75
+      Left = 194
+      Height = 31
+      Top = 78
+      Width = 79
       AutoSize = True
       BorderSpacing.Top = 3
       BorderSpacing.Bottom = 3
@@ -70,9 +71,9 @@ object frmEditHistory: TfrmEditHistory
     end
     object cbLogWrites: TCheckBox
       Left = 0
-      Height = 19
+      Height = 25
       Top = 0
-      Width = 320
+      Width = 467
       Align = alTop
       Caption = 'Enable write logging'
       OnChange = cbLogWritesChange
@@ -80,9 +81,9 @@ object frmEditHistory: TfrmEditHistory
     end
     object edtMaxWriteLogSize: TEdit
       Left = 0
-      Height = 23
-      Top = 34
-      Width = 320
+      Height = 29
+      Top = 46
+      Width = 467
       Align = alTop
       OnChange = edtMaxWriteLogSizeChange
       TabOrder = 1
@@ -90,9 +91,9 @@ object frmEditHistory: TfrmEditHistory
     end
     object Label1: TLabel
       Left = 0
-      Height = 15
-      Top = 19
-      Width = 320
+      Height = 21
+      Top = 25
+      Width = 467
       Align = alTop
       Caption = 'Max log size (nr of entries)'
       ParentColor = False

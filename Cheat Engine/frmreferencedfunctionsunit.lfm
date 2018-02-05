@@ -1,18 +1,19 @@
 object frmReferencedFunctions: TfrmReferencedFunctions
   Left = 402
-  Height = 353
+  Height = 407
   Top = 204
-  Width = 677
+  Width = 735
   Caption = 'Referenced functions'
-  ClientHeight = 353
-  ClientWidth = 677
+  ClientHeight = 407
+  ClientWidth = 735
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object lvCallList: TListView
     Left = 0
-    Height = 353
+    Height = 407
     Top = 0
     Width = 490
     Align = alLeft
@@ -38,9 +39,9 @@ object frmReferencedFunctions: TfrmReferencedFunctions
   end
   object lbReflist: TListBox
     Left = 495
-    Height = 353
+    Height = 407
     Top = 0
-    Width = 182
+    Width = 240
     Align = alClient
     ItemHeight = 0
     OnDblClick = lbReflistDblClick
@@ -49,7 +50,7 @@ object frmReferencedFunctions: TfrmReferencedFunctions
   end
   object Splitter1: TSplitter
     Left = 490
-    Height = 353
+    Height = 407
     Top = 0
     Width = 5
   end

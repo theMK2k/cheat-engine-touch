@@ -10,7 +10,7 @@ uses
   NewKernelHandler, SynEdit, SynHighlighterCpp, SynHighlighterAA, LuaSyntax, disassembler,
   MainUnit2, Assemblerunit, autoassembler, symbolhandler, SynEditSearch, SynPluginMultiCaret,
   MemoryRecordUnit, tablist, customtypehandler, registry, SynGutterBase, SynEditMarks,
-  luahandler, memscan, foundlisthelper, ProcessHandlerUnit, commonTypeDefs;
+  luahandler, memscan, foundlisthelper, ProcessHandlerUnit, commonTypeDefs, LazFileUtils, LazUTF8;
 
 
 type TCallbackRoutine=procedure(memrec: TMemoryRecord; script: string; changed: boolean) of object;

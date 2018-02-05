@@ -1,24 +1,25 @@
 object frmStackView: TfrmStackView
-  Left = 368
-  Height = 211
-  Top = 522
-  Width = 374
+  Left = 375
+  Height = 274
+  Top = 219
+  Width = 463
   BorderStyle = bsSizeToolWin
   Caption = 'Stack View'
-  ClientHeight = 211
-  ClientWidth = 374
+  ClientHeight = 274
+  ClientWidth = 463
+  Font.Height = -16
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMode = pmAuto
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object lvStack: TListView
     Left = 0
-    Height = 211
+    Height = 274
     Top = 0
-    Width = 374
+    Width = 463
     Align = alClient
     AutoWidthLastColumn = True
     Columns = <    
@@ -34,7 +35,7 @@ object frmStackView: TfrmStackView
       end    
       item
         Caption = 'Secondary'
-        Width = 210
+        Width = 299
       end>
     HideSelection = False
     MultiSelect = True

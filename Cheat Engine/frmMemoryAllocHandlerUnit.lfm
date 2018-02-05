@@ -1,29 +1,30 @@
 object frmMemoryAllocHandler: TfrmMemoryAllocHandler
-  Left = 631
-  Height = 174
-  Top = 372
-  Width = 446
+  Left = 439
+  Height = 208
+  Top = 165
+  Width = 576
   AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Memory Allocations'
-  ClientHeight = 174
-  ClientWidth = 446
+  ClientHeight = 208
+  ClientWidth = 576
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 137
-    Top = 37
-    Width = 446
+    Height = 165
+    Top = 43
+    Width = 576
     Align = alClient
     Caption = 'Data'
-    ClientHeight = 117
-    ClientWidth = 442
+    ClientHeight = 139
+    ClientWidth = 572
     TabOrder = 0
     OnClick = GroupBox1Click
     object lblErr: TLabel
@@ -32,7 +33,7 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
       AnchorSideTop.Side = asrBottom
       Left = 6
       Height = 15
-      Top = 65
+      Top = 89
       Width = 358
       BorderSpacing.Top = 5
       Caption = 'Couldn''t find in heap. Found using the Alloc hook. (Not very useful)'
@@ -48,8 +49,8 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
       AnchorSideRight.Side = asrBottom
       Left = 0
       Height = 23
-      Top = 85
-      Width = 442
+      Top = 109
+      Width = 572
       Align = alNone
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 5
@@ -68,23 +69,23 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
       AnchorSideLeft.Control = GroupBox1
       AnchorSideTop.Control = GroupBox1
       Left = 6
-      Height = 60
+      Height = 84
       Top = 0
-      Width = 97
+      Width = 128
       AutoSize = True
       BorderSpacing.Left = 6
       BorderSpacing.Bottom = 4
       BevelOuter = bvNone
-      ClientHeight = 60
-      ClientWidth = 97
+      ClientHeight = 84
+      ClientWidth = 128
       TabOrder = 1
       object Label2: TLabel
         AnchorSideTop.Control = lblBaseAddress
         AnchorSideRight.Control = lblBaseAddress
         Left = 0
-        Height = 15
+        Height = 21
         Top = 0
-        Width = 72
+        Width = 95
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'Base Address:'
@@ -94,10 +95,10 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
         AnchorSideTop.Control = Panel2
         AnchorSideRight.Control = Panel2
         AnchorSideRight.Side = asrBottom
-        Left = 77
-        Height = 15
+        Left = 100
+        Height = 21
         Top = 0
-        Width = 20
+        Width = 28
         Anchors = [akTop, akRight]
         Caption = 'xxxx'
         ParentColor = False
@@ -106,20 +107,20 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
         AnchorSideLeft.Control = lblBaseAddress
         AnchorSideTop.Control = lblBaseAddress
         AnchorSideTop.Side = asrBottom
-        Left = 77
-        Height = 15
-        Top = 15
-        Width = 20
+        Left = 100
+        Height = 21
+        Top = 21
+        Width = 28
         Caption = 'xxxx'
         ParentColor = False
       end
       object Label4: TLabel
         AnchorSideTop.Control = lblSize
         AnchorSideRight.Control = lblSize
-        Left = 49
-        Height = 15
-        Top = 15
-        Width = 23
+        Left = 64
+        Height = 21
+        Top = 21
+        Width = 31
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'Size:'
@@ -128,10 +129,10 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
       object Label3: TLabel
         AnchorSideTop.Control = lblHeapHandle
         AnchorSideRight.Control = lblHeapHandle
-        Left = 6
-        Height = 15
-        Top = 30
-        Width = 66
+        Left = 10
+        Height = 21
+        Top = 42
+        Width = 85
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'HeapHandle'
@@ -141,10 +142,10 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
         AnchorSideLeft.Control = lblBaseAddress
         AnchorSideTop.Control = lblSize
         AnchorSideTop.Side = asrBottom
-        Left = 77
-        Height = 15
-        Top = 30
-        Width = 20
+        Left = 100
+        Height = 21
+        Top = 42
+        Width = 28
         Caption = 'xxxx'
         ParentColor = False
       end
@@ -152,10 +153,10 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
         AnchorSideLeft.Control = lblBaseAddress
         AnchorSideTop.Control = lblHeapHandle
         AnchorSideTop.Side = asrBottom
-        Left = 77
-        Height = 15
-        Top = 45
-        Width = 20
+        Left = 100
+        Height = 21
+        Top = 63
+        Width = 28
         Caption = 'xxxx'
         ParentColor = False
       end
@@ -163,10 +164,10 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
         AnchorSideTop.Control = lblHeapHandle
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = lblFlags
-        Left = 42
-        Height = 15
-        Top = 45
-        Width = 30
+        Left = 56
+        Height = 21
+        Top = 63
+        Width = 39
         Anchors = [akTop, akRight]
         BorderSpacing.Right = 5
         Caption = 'Flags:'
@@ -176,20 +177,20 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
   end
   object Panel1: TPanel
     Left = 0
-    Height = 37
+    Height = 43
     Top = 0
-    Width = 446
+    Width = 576
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 37
-    ClientWidth = 446
+    ClientHeight = 43
+    ClientWidth = 576
     TabOrder = 1
     object Edit1: TEdit
       AnchorSideLeft.Control = Panel1
       AnchorSideTop.Control = Panel1
       Left = 8
-      Height = 23
+      Height = 29
       Top = 8
       Width = 121
       BorderSpacing.Left = 8
@@ -202,9 +203,9 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
       AnchorSideTop.Control = Edit1
       AnchorSideTop.Side = asrCenter
       Left = 131
-      Height = 25
+      Height = 31
       Top = 7
-      Width = 104
+      Width = 128
       AutoSize = True
       BorderSpacing.Left = 2
       BorderSpacing.Bottom = 5
@@ -219,10 +220,10 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 373
-      Height = 25
+      Left = 428
+      Height = 31
       Top = 7
-      Width = 65
+      Width = 140
       Anchors = [akTop, akLeft, akRight]
       AutoSize = True
       BorderSpacing.Right = 8
@@ -236,10 +237,10 @@ object frmMemoryAllocHandler: TfrmMemoryAllocHandler
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Edit1
       AnchorSideTop.Side = asrCenter
-      Left = 243
-      Height = 19
+      Left = 267
+      Height = 25
       Top = 10
-      Width = 130
+      Width = 161
       BorderSpacing.Left = 8
       Caption = 'Hook alloc functions'
       OnClick = cbHookAllocsClick

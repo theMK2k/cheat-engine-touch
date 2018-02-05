@@ -1,25 +1,26 @@
 object formDifferentBitSize: TformDifferentBitSize
-  Left = 719
-  Height = 145
-  Top = 250
-  Width = 329
+  Left = 400
+  Height = 191
+  Top = 166
+  Width = 340
   VertScrollBar.Visible = False
   AutoSize = True
   BorderIcons = [biSystemMenu]
   Caption = 'Different sized row of bits'
-  ClientHeight = 145
-  ClientWidth = 329
+  ClientHeight = 191
+  ClientWidth = 340
+  Font.Height = -16
   OnCreate = FormCreate
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Labelold: TLabel
     AnchorSideTop.Control = Label1
     AnchorSideTop.Side = asrBottom
     Left = 130
     Height = 18
-    Top = 70
+    Top = 115
     Width = 80
     BorderSpacing.Top = 10
     Caption = 'LabelOld'
@@ -33,7 +34,7 @@ object formDifferentBitSize: TformDifferentBitSize
     AnchorSideTop.Side = asrBottom
     Left = 130
     Height = 18
-    Top = 90
+    Top = 135
     Width = 80
     BorderSpacing.Top = 2
     Caption = 'LabelNew'
@@ -44,9 +45,9 @@ object formDifferentBitSize: TformDifferentBitSize
   end
   object Label1: TLabel
     Left = 0
-    Height = 60
+    Height = 105
     Top = 0
-    Width = 329
+    Width = 340
     Align = alTop
     Caption = 'The last time you scanned the number of bits was 90 and now it is 12. Please tell me how and how much i must change the bit offset to successfully scan. (Left arrow+right arrow move the bits)'
     ParentColor = False
@@ -57,9 +58,9 @@ object formDifferentBitSize: TformDifferentBitSize
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Button1
     AnchorSideTop.Side = asrCenter
-    Left = 148
-    Height = 23
-    Top = 117
+    Left = 154
+    Height = 29
+    Top = 159
     Width = 33
     BorderSpacing.Top = 3
     OnKeyDown = Edit1KeyDown
@@ -73,9 +74,9 @@ object formDifferentBitSize: TformDifferentBitSize
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = LabelNew
     AnchorSideTop.Side = asrBottom
-    Left = 127
+    Left = 133
     Height = 25
-    Top = 116
+    Top = 161
     Width = 75
     BorderSpacing.Top = 8
     Caption = 'OK'

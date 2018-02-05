@@ -1,24 +1,25 @@
 object formPointerOrPointee: TformPointerOrPointee
-  Left = 358
+  Left = 373
   Height = 99
-  Top = 798
-  Width = 354
+  Top = 242
+  Width = 434
   AutoSize = True
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cheat Engine Pointer'
   ClientHeight = 99
-  ClientWidth = 354
+  ClientWidth = 434
+  Font.Height = -16
   PopupMode = pmAuto
   Position = poMainFormCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Label1: TLabel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     Left = 8
-    Height = 15
+    Height = 21
     Top = 4
-    Width = 86
+    Width = 112
     BorderSpacing.Left = 8
     BorderSpacing.Top = 4
     Caption = 'This is a pointer.'
@@ -29,13 +30,13 @@ object formPointerOrPointee: TformPointerOrPointee
     AnchorSideTop.Control = Label1
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 62
-    Top = 19
-    Width = 341
+    Height = 74
+    Top = 25
+    Width = 436
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 62
-    ClientWidth = 341
+    ClientHeight = 74
+    ClientWidth = 436
     TabOrder = 0
     object Button1: TButton
       AnchorSideLeft.Control = Panel1
@@ -43,9 +44,9 @@ object formPointerOrPointee: TformPointerOrPointee
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       Left = 8
-      Height = 25
+      Height = 31
       Top = 2
-      Width = 325
+      Width = 420
       Anchors = [akTop, akLeft, akRight]
       AutoSize = True
       BorderSpacing.Left = 8
@@ -62,9 +63,9 @@ object formPointerOrPointee: TformPointerOrPointee
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       Left = 8
-      Height = 25
-      Top = 32
-      Width = 325
+      Height = 31
+      Top = 38
+      Width = 420
       Anchors = [akTop, akLeft, akRight]
       AutoSize = True
       BorderSpacing.Left = 8

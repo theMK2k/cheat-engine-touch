@@ -19,12 +19,14 @@ uses
   htmlhelp, win32int, {defaulttranslator,} fileaccess, formdesignerunit,
   ceguicomponents, frmautoinjectunit, cesupport, trainergenerator, genericHotkey,
   luafile, xmplayer_server, sharedMemory{$ifdef windows}, win32proc{$endif},
-  vmxfunctions, FileUtil, networkInterfaceApi, networkconfig, d3dhookUnit, PNGcomn,
-  FPimage, byteinterpreter, frmgroupscanalgoritmgeneratorunit, vartypestrings,
-  groupscancommandparser, GraphType, IntfGraphics, RemoteMemoryManager,
-  DBK64SecondaryLoader, savedscanhandler, debuggertypedefinitions, networkInterface,
-  FrmMemoryRecordDropdownSettingsUnit, xmlutils, zstream, zstreamext, commonTypeDefs,
-  VirtualQueryExCache, LazLogger, LazUTF8;
+  vmxfunctions, FileUtil, networkInterfaceApi, networkconfig, d3dhookUnit,
+  PNGcomn, FPimage, byteinterpreter, frmgroupscanalgoritmgeneratorunit,
+  vartypestrings, groupscancommandparser, GraphType, IntfGraphics, BCPanel,
+  BCGameGrid, BCTrackbarUpdown, BCRadialProgressBar, BGRAFlashProgressBar,
+  BGRAGraphicControl, RemoteMemoryManager, DBK64SecondaryLoader,
+  savedscanhandler, debuggertypedefinitions, networkInterface,
+  FrmMemoryRecordDropdownSettingsUnit, xmlutils, zstream, zstreamext,
+  commonTypeDefs, VirtualQueryExCache, LazLogger, LazUTF8, SpinEx, Types;
 
 //the following are just for compatibility
 
@@ -234,9 +236,33 @@ type
   TMainForm = class(TForm)
     actOpenLuaEngine: TAction;
     actOpenDissectStructure: TAction;
+    btnMoreScanOptions: TButton;
+    btnAbout: TButton;
+    btnResultsAddToSavedAddresses: TButton;
+    btn_Load: TButton;
+    btn_miChangeColor: TButton;
+    btn_Save: TButton;
+    btn_Type1: TButton;
+    btn_Description1: TButton;
+    btn_Address1: TButton;
+    btn_Freezealladdresses2: TButton;
+    btnResultsChangeValue: TButton;
+    btnResultsResetValue: TButton;
     btnSetSpeedhack2: TButton;
     btnAddAddressManually: TButton;
     btnMemoryView: TButton;
+    btn_Attach_to_Process: TButton;
+    btn_Enhanced_Scan_Options_goto_Scan: TButton;
+    btn_Deletethisrecord1: TButton;
+    btn_Saved_Addresses_goto_Results: TButton;
+    btn_Scan_goto_Results: TButton;
+    btn_Results_goto_Saved_Addresses: TButton;
+    btn_Select_Process_goto_Scan: TButton;
+    btn_Scan_goto_Select_Process: TButton;
+    btn_Results_goto_Scan: TButton;
+    btn_Value1: TButton;
+    btn_Smarteditaddresses1: TButton;
+    btn_miUndoValue: TButton;
     cbCaseSensitive: TCheckBox;
     cbCopyOnWrite: TCheckBox;
     cbExecutable: TCheckBox;
@@ -255,6 +281,13 @@ type
     CreateGroup: TMenuItem;
     FromAddress: TEdit;
     andlabel: TLabel;
+    gb_Results_Actions: TGroupBox;
+    gb_Saved_Addresses_Actions: TGroupBox;
+    lbl_Results: TLabel;
+    lbl_Results1: TLabel;
+    lbl_Results2: TLabel;
+    lbl_Welcome: TLabel;
+    lbl_Scan: TLabel;
     lblSigned: TLabel;
     MainMenu2: TMainMenu;
     MenuItem12: TMenuItem;
@@ -266,8 +299,26 @@ type
     MenuItem13: TMenuItem;
     miFlFindWhatWrites: TMenuItem;
     miLanguages: TMenuItem;
+    rbDisplayHex: TRadioButton;
+    rbDisplayDefault: TRadioButton;
+    rbDisplayByte: TRadioButton;
+    rbDisplay2Byte: TRadioButton;
+    rbDisplay4Byte: TRadioButton;
+    rbDisplay8Byte: TRadioButton;
+    rbDisplayFloat: TRadioButton;
+    rbDisplayDouble: TRadioButton;
+    rg_ValueTypes: TRadioGroup;
+    tab_Saved_Addresses: TTabSheet;
+    tab_Enhanced_Scan_Options: TTabSheet;
+    tab_Results: TTabSheet;
+    tab_Scan: TTabSheet;
+    tcl_NewControls: TPageControl;
+    tab_Select_Process: TTabSheet;
+    tcl_Main: TPageControl;
     ScanText2: TLabel;
     scanvalue2: TEdit;
+    OldControls: TTabSheet;
+    NewControls: TTabSheet;
     ToAddress: TEdit;
     editSH2: TEdit;
     edtAlignment: TEdit;
@@ -355,7 +406,6 @@ type
     miFreezePositive: TMenuItem;
     miFreezeNegative: TMenuItem;
     Panel1: TPanel;
-    Panel10: TPanel;
     Panel14: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
@@ -482,6 +532,13 @@ type
     procedure actOpenDissectStructureExecute(Sender: TObject);
     procedure actOpenLuaEngineExecute(Sender: TObject);
     procedure Address1Click(Sender: TObject);
+    procedure btnMoreScanOptionsClick(Sender: TObject);
+    procedure btn_Results_goto_Saved_AddressesClick(Sender: TObject);
+    procedure btn_Saved_Addresses_goto_ResultsClick(Sender: TObject);
+    procedure btn_Scan_goto_ResultsClick(Sender: TObject);
+    procedure btn_Scan_goto_Select_ProcessClick(Sender: TObject);
+    procedure btn_Select_Process_goto_ScanClick(Sender: TObject);
+    procedure btn_Value1Click(Sender: TObject);
     procedure cbCodePageChange(Sender: TObject);
     procedure cbUnicodeChange(Sender: TObject);
     procedure EnableLCLClick(Sender: TObject);
@@ -498,6 +555,7 @@ type
     procedure CreateGroupClick(Sender: TObject);
     procedure Foundlist3SelectItem(Sender: TObject; Item: TListItem;
       Selected: boolean);
+    procedure lblSignedClick(Sender: TObject);
     procedure MenuItem12Click(Sender: TObject);
     procedure miChangeValueBackClick(Sender: TObject);
     procedure miSignTableClick(Sender: TObject);
@@ -558,14 +616,25 @@ type
     procedure miWireframeClick(Sender: TObject);
     procedure miZbufferClick(Sender: TObject);
     procedure miZeroTerminateClick(Sender: TObject);
+    procedure OldControlsContextPopup(Sender: TObject; MousePos: TPoint;
+      var Handled: Boolean);
     procedure ools1Click(Sender: TObject);
     procedure Panel1Click(Sender: TObject);
     procedure Panel5Resize(Sender: TObject);
     procedure pmTablistPopup(Sender: TObject);
     procedure pmValueTypePopup(Sender: TObject);
     procedure rbAllMemoryChange(Sender: TObject);
+    procedure rbDisplay2ByteClick(Sender: TObject);
+    procedure rbDisplay4ByteClick(Sender: TObject);
+    procedure rbDisplay8ByteClick(Sender: TObject);
+    procedure rbDisplayByteClick(Sender: TObject);
+    procedure rbDisplayDefaultChange(Sender: TObject);
+    procedure rbDisplayDoubleClick(Sender: TObject);
+    procedure rbDisplayFloatClick(Sender: TObject);
+    procedure rbDisplayHexClick(Sender: TObject);
     procedure rbFsmAlignedChange(Sender: TObject);
     procedure Save1Click(Sender: TObject);
+    procedure scanvalueChange(Sender: TObject);
     procedure ShowProcessListButtonClick(Sender: TObject);
     procedure btnNewScanClick(Sender: TObject);
     procedure btnNextScanClick(Sender: TObject);
@@ -768,6 +837,7 @@ type
     function getSelectedVariableType: TVariableType;
     procedure setfoundcount(x: int64);
 
+    function isResultSelected: bool;
 
     procedure AddresslistDropByListview(Sender: TObject; node: TTreenode;
       attachmode: TNodeAttachMode);
@@ -1976,6 +2046,27 @@ begin
   foundcountlabel.Caption := Format('%.0n', [xdouble]);
 end;
 
+function TMainForm.isResultSelected: bool;
+var
+  i: integer;
+  isSelected: bool;
+begin
+  isSelected := false;
+
+  for i := 0 to foundlist3.Items.Count - 1 do
+    if foundlist3.Items[i].Selected then
+    begin
+      isSelected := true;
+    end;
+
+  if isSelected = false then
+  begin
+    ShowMessage('Please select an entry of the Results list first.');
+  end;
+
+  isResultSelected := isSelected;
+end;
+
 procedure TMainForm.DestroyCancelButton;
 begin
   if cancelbutton <> nil then
@@ -2009,7 +2100,7 @@ begin
     cancelbutton.AnchorSideLeft.Side:=asrLeft;
     cancelbutton.Anchors:=[akLeft, akTop];
 
-    parent := panel5;
+    parent := Panel5;
   end;
 
   cancelbuttonenabler := TTimer.Create(self);
@@ -2230,7 +2321,7 @@ begin
   scanvalue2.visible:=true;
   scantext2.visible:=true;
 
-  panel5.OnResize(panel5);
+  Panel5.OnResize(Panel5);
 end;
 
 procedure TMainForm.DestroyScanValue2;
@@ -2852,12 +2943,54 @@ begin
   if resu = mrCancel then
     exit;
 
+  btn_Select_Process_goto_Scan.Enabled:=True;
+
   openProcessEpilogue(oldprocessname, oldprocess, oldprocesshandle);
 end;
 
 procedure TMainForm.rbAllMemoryChange(Sender: TObject);
 begin
 
+end;
+
+procedure TMainForm.rbDisplay2ByteClick(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplay2Byte);
+end;
+
+procedure TMainForm.rbDisplay4ByteClick(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplay4Byte);
+end;
+
+procedure TMainForm.rbDisplay8ByteClick(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplay8Byte);
+end;
+
+procedure TMainForm.rbDisplayByteClick(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplayByte);
+end;
+
+procedure TMainForm.rbDisplayDefaultChange(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplayDefault);
+end;
+
+procedure TMainForm.rbDisplayDoubleClick(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplayDouble);
+end;
+
+procedure TMainForm.rbDisplayFloatClick(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplayFloat);
+end;
+
+procedure TMainForm.rbDisplayHexClick(Sender: TObject);
+begin
+  miChangeDisplayTypeClick(miDisplayHex)
 end;
 
 procedure TMainForm.rbFsmAlignedChange(Sender: TObject);
@@ -2877,6 +3010,11 @@ begin
     actSave.Execute
   else
     savetable(savedialog1.FileName);
+end;
+
+procedure TMainForm.scanvalueChange(Sender: TObject);
+begin
+
 end;
 
 procedure TMainForm.Description1Click(Sender: TObject);
@@ -2943,6 +3081,43 @@ end;
 procedure TMainForm.Address1Click(Sender: TObject);
 begin
   addresslist.doAddressChange;
+end;
+
+procedure TMainForm.btnMoreScanOptionsClick(Sender: TObject);
+begin
+  tcl_NewControls.ActivePage := tab_Enhanced_Scan_Options;
+end;
+
+procedure TMainForm.btn_Results_goto_Saved_AddressesClick(Sender: TObject);
+begin
+  tcl_NewControls.ActivePage := tab_Saved_Addresses;
+end;
+
+procedure TMainForm.btn_Saved_Addresses_goto_ResultsClick(Sender: TObject);
+begin
+  foundlistpopupPopup(nil);
+  tcl_NewControls.ActivePage := tab_Results;
+end;
+
+procedure TMainForm.btn_Scan_goto_ResultsClick(Sender: TObject);
+begin
+  foundlistpopupPopup(nil);
+  tcl_NewControls.ActivePage := tab_Results;
+end;
+
+procedure TMainForm.btn_Scan_goto_Select_ProcessClick(Sender: TObject);
+begin
+  tcl_NewControls.ActivePage := tab_Select_Process;
+end;
+
+procedure TMainForm.btn_Select_Process_goto_ScanClick(Sender: TObject);
+begin
+  tcl_NewControls.ActivePage := tab_Scan;
+end;
+
+procedure TMainForm.btn_Value1Click(Sender: TObject);
+begin
+  addresslist.TreeviewDblClick(nil);
 end;
 
 procedure TMainForm.cbCodePageChange(Sender: TObject);
@@ -3067,6 +3242,11 @@ end;
 
 procedure TMainForm.Foundlist3SelectItem(Sender: TObject; Item: TListItem;
   Selected: boolean);
+begin
+
+end;
+
+procedure TMainForm.lblSignedClick(Sender: TObject);
 begin
 
 end;
@@ -4475,7 +4655,7 @@ begin
     scantablist.AnchorSideTop.Control:=scantabtopcontrol;
     scantablist.AnchorSideTop.Side:=asrBottom;
 
-    scantablist.AnchorSideLeft.Control:=panel5;
+    scantablist.AnchorSideLeft.Control:=Panel5;
     scantablist.AnchorSideLeft.Side:=asrLeft;
 
     scantablist.AnchorSideRight.Control:=logopanel;
@@ -4488,8 +4668,8 @@ begin
 
 
     scantablist.PopupMenu := pmTablist;
-    scantablist.color := panel5.Color;
-    scantablist.Parent:=panel5;
+    scantablist.color := Panel5.Color;
+    scantablist.Parent:=Panel5;
     scantablist.Anchors := [akTop, akLeft, akRight];
 
     scantablist.Height := scantablist.Canvas.TextHeight('WwJjDdQq')+4;
@@ -4520,7 +4700,7 @@ begin
     scantablist.Brush.Color := clBtnFace;
 
 
-    foundlist3.Height := btnMemoryView.top - foundlist3.top - foundlistheightdiff;
+    // MK2k foundlist3.Height := btnMemoryView.top - foundlist3.top - foundlistheightdiff;
 
     scantype.Top:=scantype.top+scantablist.Height+4;
   end
@@ -4654,6 +4834,12 @@ begin
       addresslist.selectedRecord.Extra.stringData.ZeroTerminate;
 end;
 
+procedure TMainForm.OldControlsContextPopup(Sender: TObject; MousePos: TPoint;
+  var Handled: Boolean);
+begin
+
+end;
+
 procedure TMainForm.ools1Click(Sender: TObject);
 begin
 
@@ -4669,12 +4855,13 @@ procedure TMainForm.Panel5Resize(Sender: TObject);
 var
   widthleft,w,aw: integer;
 begin
- // scanvalue2.width:=(((panel5.width-5)-scanvalue.left+((andlabel.width+10) div 2)) div 2);
-  w:=(panel5.clientwidth-scanvalue.left)-5 ;
+ // scanvalue2.width:=(((Panel5.width-5)-scanvalue.left+((andlabel.width+10) div 2)) div 2);
+
+  w:=(Panel5.clientwidth-scanvalue.left)-5 ;
   aw:=andlabel.width+8;
   scanvalue2.width:=(w div 2) - (aw div 2);
 
-  {cbSpeedhack.left := panel5.clientwidth - cbspeedhack.Width;
+  {cbSpeedhack.left := Panel5.clientwidth - cbspeedhack.Width;
   cbUnrandomizer.left := cbspeedhack.left;
   gbScanOptions.Left := cbUnrandomizer.left - gbScanOptions.Width - 3;
 
@@ -4848,6 +5035,7 @@ begin
   lblcompareToSavedScan.Visible := False;
 
   miDisplayDefault.checked:=true;
+  rbDisplayDefault.checked:=true;
   foundlistDisplayOverride:=0;
 
   if formsettings.cbPauseWhenScanningOnByDefault.checked then
@@ -5268,7 +5456,7 @@ begin
   addresslist.Width := 500;
   addresslist.Height := 150;
   addresslist.top := 50;
-  addresslist.parent := panel1;
+  addresslist.parent := Panel1;
   addresslist.PopupMenu := popupmenu2;
   addresslist.OnDropByListview := AddresslistDropByListview;
   addresslist.OnAutoAssemblerEdit := AddressListAutoAssemblerEdit;
@@ -5287,7 +5475,7 @@ begin
     addresslist.headers.Sections[2].Width := x[2];
     addresslist.headers.Sections[3].Width := x[3];
     addresslist.headers.Sections[4].Width := x[4];
-    panel5.Height := x[5];
+    Panel5.Height := x[5];
     foundlist3.columns[0].Width := x[6];
   end;
 
@@ -5308,6 +5496,8 @@ begin
 
   luaclass_newClass(luavm, addresslist);
   lua_setglobal(luavm,'AddressList');
+
+  tcl_NewControls.ActivePage := tab_Select_Process;
 end;
 
 procedure TMainForm.ChangedHandle(Sender: TObject);
@@ -6201,11 +6391,11 @@ begin
   //set the old vartype
   oldvartype := vartype.ItemIndex;
 
-  for i := 0 to panel5.ControlCount - 1 do
+  for i := 0 to Panel5.ControlCount - 1 do
   begin
-    panel5.Controls[i].Refresh;
-    panel5.Controls[i].Repaint;
-    panel5.Controls[i].Invalidate;
+    Panel5.Controls[i].Refresh;
+    Panel5.Controls[i].Repaint;
+    Panel5.Controls[i].Invalidate;
   end;
 
 
@@ -6216,7 +6406,7 @@ begin
     washex, cbhexadecimal.Checked);
 
 
-  panel5.OnResize(panel5); //lazarus, force the scantext left
+  Panel5.OnResize(Panel5); //lazarus, force the scantext left
 
 
   if ScanType.itemindex=-1 then
@@ -6271,7 +6461,13 @@ begin
 end;
 
 procedure TMainForm.SpeedButton3Click(Sender: TObject);
+var
+  i: integer;
+  isSelected: bool;
 begin
+  if not isResultSelected() then
+   exit;
+
   AddresslistDropByListview(addresslist, nil, naAdd);
 end;
 
@@ -6500,8 +6696,10 @@ begin
     bytesize:=1; //should never happen
 
   MenuItem19.visible:=(foundlist3.Items.Count>0) and (memscan<>nil);
+  rg_ValueTypes.visible:=(foundlist3.Items.Count>0) and (memscan<>nil);
 
   miDisplayDefault.visible:=(foundlist3.Items.Count>0) and (memscan<>nil);
+  rbDisplayDefault.visible:=(foundlist3.Items.Count>0) and (memscan<>nil);
 
   miDisplayByte.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=1);
   miDisplay2Byte.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=2);
@@ -6511,13 +6709,27 @@ begin
   miDisplayDouble.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=8);
   miDisplayHex.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=1);
 
+  rbDisplayByte.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=1);
+  rbDisplay2Byte.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=2);
+  rbDisplay4Byte.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=4);
+  rbDisplay8Byte.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=8);
+  rbDisplayFloat.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=4);
+  rbDisplayDouble.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=8);
+  rbDisplayHex.visible:=(foundlist3.Items.Count>0) and (memscan<>nil) and (bytesize>=1);
+
 //  miDisplayHex.caption:
   if foundlist<>nil then
   begin
     if foundlist.isHexadecimal then
-      miDisplayHex.caption:=rsDecimal
+    begin
+      miDisplayHex.caption:=rsDecimal;
+      rbDisplayHex.Caption:=rsDecimal;
+    end
     else
-      miDisplayHex.caption:=rsHexadecimal
+    begin
+      miDisplayHex.caption:=rsHexadecimal;
+      rbDisplayHex.Caption:=rsHexadecimal;
+    end;
   end;
 
 
@@ -6799,7 +7011,7 @@ begin
     begin
       with TformPointerOrPointee.Create(self) do
       begin
-        button1.Caption := rsFindOutWhatAccessesThisPointer;
+        btn_Attach_to_Process.Caption := rsFindOutWhatAccessesThisPointer;
         button2.Caption := rsFindWhatAccessesTheAddressPointedAtByThisPointer;
 
         res := showmodal;
@@ -6837,7 +7049,7 @@ begin
     begin
       with TformPointerOrPointee.Create(self) do
       begin
-        button1.Caption := rsFindOutWhatWritesThisPointer;
+        btn_Attach_to_Process.Caption := rsFindOutWhatWritesThisPointer;
         button2.Caption := rsFindWhatWritesTheAddressPointedAtByThisPointer;
 
         res := showmodal;
@@ -7241,7 +7453,7 @@ begin
     label6.AnchorSideTop.Control:=ProgressBar;
 
 
-  panel5resize(panel5);
+  // MK2k  panel5resize(Panel5);
 
   if WindowsVersion>=wvVista then
   begin
@@ -7322,14 +7534,14 @@ begin
 
 
 
-  pnlScanOptions.Constraints.MinHeight:=gbScanOptions.Top-panel9.top;
-  panel10.Constraints.MinWidth:=max(panel14.Width, panel10.Width);
+  // MK2k pnlScanOptions.Constraints.MinHeight:=gbScanOptions.Top-panel9.top;
 
-  pnlScanValueOptions.Constraints.MinHeight:=rbBit.Height+rbDec.height;
-  pnlScanValueOptions.Constraints.MinWidth:=max(rbDec.width, rbBit.width);
+  // pnlScanValueOptions.Constraints.MinHeight:=rbBit.Height+rbDec.height;
+  // pnlScanValueOptions.Constraints.MinWidth:=max(rbDec.width, rbBit.width);
 
-  if i>pnlScanValueOptions.left then
-    i:=pnlScanValueOptions.left-4;
+  // MK2k
+  //if i>pnlScanValueOptions.left then
+  //  i:=pnlScanValueOptions.left-4;
 
   if i>lblValueType.left then
     i:=lblValueType.left-4;
@@ -7349,15 +7561,15 @@ begin
   if i<0 then
   begin
     clientwidth:=clientwidth+(-i);
-    foundlist3.width:=1;
-  end
-  else
-    foundlist3.width:=i;
+    // MK2k foundlist3.width:=1;
+  end;
+  // MK2k else
+  //  foundlist3.width:=i;
 
 
 
-  if speedbutton2.top<btnMemoryView.Top then
-    foundlist3.AnchorSideBottom.Control:=speedbutton2;
+  // MK2k if speedbutton2.top<btnMemoryView.Top then
+  //  foundlist3.AnchorSideBottom.Control:=speedbutton2;
 
 
   lblcompareToSavedScan.left:=btnNewScan.left-(lblcompareToSavedScan.Width div 2)+((btnNextScan.left+btnNextScan.Width-btnNewScan.left) div 2);
@@ -7383,10 +7595,10 @@ begin
 
   fromaddress.Font.Height:=i;
   toaddress.Font.Height:=i;
-  Foundlist3.Font.Height:=i;
+  // Foundlist3.Font.Height:=i;
 
 
-  panel5.Constraints.MinHeight := gbScanOptions.top + gbScanOptions.Height + max(speedbutton2.Height, btnAddAddressManually.height ) + 10;
+  Panel5.Constraints.MinHeight := gbScanOptions.top + gbScanOptions.Height + max(speedbutton2.Height, btnAddAddressManually.height ) + 10;
 
 
 
@@ -7396,7 +7608,7 @@ begin
     foundlist3.Column[1].AutoSize:=true;
     foundlist3.Column[2].AutoSize:=true;
 
-    j:=max(foundlist3.canvas.textwidth('DDDDDDDDDDDDD'), foundlist3.Column[0].Width);
+    j:=max(foundlist3.canvas.textwidth('DDDDDDDDDDDDDXXXX'), foundlist3.Column[0].Width);
 
     foundlist3.Column[0].AutoSize:=false;
     foundlist3.Column[0].Width:=j;
@@ -7410,7 +7622,7 @@ begin
     if foundlist3.clientWidth<i then
       width:=width+(i-foundlist3.clientWidth);
 
-    i:=panel5.Height+splitter1.height+addresslist.headers.Height+btnNewScan.Height*4;
+    i:=Panel5.Height+splitter1.height+addresslist.headers.Height+btnNewScan.Height*4;
     if clientheight<i then
       clientheight:=i;
 
@@ -7431,23 +7643,26 @@ begin
 
 
     //initial state: focus on the addresslist
-    panel5.height:=gbScanOptions.top+gbScanOptions.Height;
+    Panel5.height:=gbScanOptions.top+gbScanOptions.Height;
 
   end;
 
-  panel5.OnResize(panel5);
+  Panel5.OnResize(Panel5);
 
   btnSetSpeedhack2.AutoSize:=false;
   btnSetSpeedhack2.Height:=btnAddAddressManually.Height;
 
-  scantype.Anchors:=[akRight];
+  // MK2k scantype.Anchors:=[akRight];
   scantype.AnchorSideTop.Control:=nil;
-  scantype.Anchors:=[akRight, akTop];
+  // MK2k scantype.Anchors:=[akRight, akTop];
 
   if not memscan.canWriteResults then
     MessageDlg(Format(rsInvalidScanFolder, [memscan.GetScanFolder]), mtError, [mbOk], 0);
 
  // ImageList2.GetBitmap(0);
+
+ // MK2k
+ tcl_Main.ActivePage := NewControls;
 end;
 
 
@@ -7558,7 +7773,7 @@ end;
 
 procedure TMainForm.Splitter1Moved(Sender: TObject);
 begin
-  panel5.Repaint;
+  Panel5.Repaint;
 end;
 
 procedure TMainForm.SettingsClick(Sender: TObject);
@@ -8528,6 +8743,9 @@ var
 
   savedscan: TSavedScanHandler;
 begin
+  if not isResultSelected() then
+   exit;
+
   //show a list of possible options. Previous, last scan, savedscan
   if memscan=nil then exit;
 
@@ -8574,6 +8792,9 @@ var
   vt: TVariableType;
   customtype: TCustomType;
 begin
+ if not isResultSelected() then
+   exit;
+
   customtype:=nil;
   if foundlist3.Selected<>nil then
   begin
@@ -9153,7 +9374,7 @@ begin
     addresslist.headers.Sections[2].Width,
     addresslist.headers.Sections[3].Width,
     addresslist.headers.Sections[4].Width,
-    panel5.Height,
+    Panel5.Height,
     foundlist3.columns[0].Width]);
 
 

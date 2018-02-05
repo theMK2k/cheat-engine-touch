@@ -1,17 +1,18 @@
 object AdvancedOptions: TAdvancedOptions
-  Left = 256
+  Left = 326
   Height = 303
-  Top = 192
+  Top = 162
   Width = 571
   Caption = 'Advanced Options'
   ClientHeight = 303
   ClientWidth = 571
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnResize = FormResize
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object Panel1: TPanel
     Left = 0
     Height = 35
@@ -159,10 +160,10 @@ object AdvancedOptions: TAdvancedOptions
       AnchorSideTop.Control = Panel2
       AnchorSideBottom.Control = Panel2
       AnchorSideBottom.Side = asrBottom
-      Left = 261
-      Height = 15
-      Top = 25
-      Width = 49
+      Left = 254
+      Height = 21
+      Top = 19
+      Width = 63
       Anchors = [akLeft, akBottom]
       Caption = 'Code list:'
       ParentColor = False

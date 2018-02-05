@@ -1,20 +1,21 @@
 object frmTrainerGenerator: TfrmTrainerGenerator
-  Left = 819
-  Height = 412
-  Top = 152
-  Width = 778
+  Left = 353
+  Height = 506
+  Top = 123
+  Width = 908
   AutoSize = True
   Caption = 'Trainer generator'
-  ClientHeight = 412
-  ClientWidth = 778
+  ClientHeight = 506
+  ClientWidth = 908
   Constraints.MinHeight = 310
   Constraints.MinWidth = 690
+  Font.Height = -16
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Panel2: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -22,13 +23,13 @@ object frmTrainerGenerator: TfrmTrainerGenerator
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 0
-    Height = 412
+    Height = 506
     Top = 0
-    Width = 285
+    Width = 325
     Anchors = [akTop, akLeft, akRight, akBottom]
     AutoSize = True
-    ClientHeight = 412
-    ClientWidth = 285
+    ClientHeight = 506
+    ClientWidth = 325
     TabOrder = 0
     OnResize = Panel2Resize
     object lvCheats: TListView
@@ -36,9 +37,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
       AnchorSideBottom.Control = Panel4
       AnchorSideBottom.Side = asrBottom
       Left = 1
-      Height = 377
+      Height = 465
       Top = 1
-      Width = 261
+      Width = 301
       Align = alCustom
       Anchors = [akTop, akLeft, akRight, akBottom]
       Columns = <      
@@ -59,20 +60,20 @@ object frmTrainerGenerator: TfrmTrainerGenerator
     end
     object Panel3: TPanel
       Left = 1
-      Height = 33
-      Top = 378
-      Width = 283
+      Height = 39
+      Top = 466
+      Width = 323
       Align = alBottom
       AutoSize = True
-      ClientHeight = 33
-      ClientWidth = 283
+      ClientHeight = 39
+      ClientWidth = 323
       TabOrder = 1
       object btnDelete: TButton
         AnchorSideLeft.Control = Panel3
         Left = 3
-        Height = 25
+        Height = 31
         Top = 2
-        Width = 100
+        Width = 123
         Anchors = [akLeft, akBottom]
         AutoSize = True
         BorderSpacing.Left = 2
@@ -87,10 +88,10 @@ object frmTrainerGenerator: TfrmTrainerGenerator
       object btnAddHotkey: TButton
         AnchorSideLeft.Control = btnDelete
         AnchorSideLeft.Side = asrBottom
-        Left = 107
-        Height = 25
+        Left = 130
+        Height = 31
         Top = 2
-        Width = 89
+        Width = 107
         Anchors = [akLeft, akBottom]
         AutoSize = True
         BorderSpacing.Left = 4
@@ -104,14 +105,14 @@ object frmTrainerGenerator: TfrmTrainerGenerator
       end
     end
     object Panel4: TPanel
-      Left = 262
-      Height = 377
+      Left = 302
+      Height = 465
       Top = 1
       Width = 22
       Align = alRight
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 377
+      ClientHeight = 465
       ClientWidth = 22
       TabOrder = 2
       object spbDown: TSpeedButton
@@ -120,7 +121,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
         AnchorSideBottom.Side = asrBottom
         Left = 1
         Height = 27
-        Top = 349
+        Top = 437
         Width = 21
         Anchors = [akLeft, akBottom]
         BorderSpacing.Left = 1
@@ -148,7 +149,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
         AnchorSideBottom.Control = spbDown
         Left = 1
         Height = 28
-        Top = 321
+        Top = 409
         Width = 21
         Anchors = [akLeft, akBottom]
         Enabled = False
@@ -178,40 +179,40 @@ object frmTrainerGenerator: TfrmTrainerGenerator
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
-    Left = 285
-    Height = 412
+    Left = 325
+    Height = 506
     Top = 0
-    Width = 493
+    Width = 583
     Anchors = [akTop, akRight, akBottom]
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 412
-    ClientWidth = 493
+    ClientHeight = 506
+    ClientWidth = 583
     TabOrder = 1
     object Panel8: TPanel
       AnchorSideLeft.Control = Panel1
       AnchorSideTop.Control = Panel1
       Left = 0
-      Height = 312
+      Height = 384
       Top = 0
-      Width = 493
+      Width = 583
       AutoSize = True
       BorderSpacing.Bottom = 2
       BevelOuter = bvNone
-      ClientHeight = 312
-      ClientWidth = 493
+      ClientHeight = 384
+      ClientWidth = 583
       TabOrder = 0
       object Panel5: TPanel
         AnchorSideLeft.Control = Panel8
         AnchorSideTop.Control = Panel8
         Left = 0
-        Height = 312
+        Height = 384
         Top = 0
-        Width = 259
+        Width = 307
         AutoSize = True
         BevelOuter = bvNone
-        ClientHeight = 312
-        ClientWidth = 259
+        ClientHeight = 384
+        ClientWidth = 307
         TabOrder = 0
         object comboProcesslist: TComboBox
           AnchorSideLeft.Control = Label2
@@ -219,9 +220,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Side = asrBottom
           Left = 7
           Height = 23
-          Top = 34
+          Top = 46
           Width = 252
-          ItemHeight = 15
+          ItemHeight = 21
           TabOrder = 0
         end
         object Label2: TLabel
@@ -229,9 +230,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = cbSupportCheatEngine
           AnchorSideTop.Side = asrBottom
           Left = 7
-          Height = 15
-          Top = 19
-          Width = 70
+          Height = 21
+          Top = 25
+          Width = 92
           Caption = 'Processname'
           ParentColor = False
         end
@@ -240,9 +241,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = comboProcesslist
           AnchorSideTop.Side = asrBottom
           Left = 7
-          Height = 19
-          Top = 57
-          Width = 157
+          Height = 25
+          Top = 69
+          Width = 202
           Caption = 'Popup trainer on keypress'
           TabOrder = 1
         end
@@ -251,8 +252,8 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = cbPopupOnKeypress
           AnchorSideTop.Side = asrBottom
           Left = 7
-          Height = 23
-          Top = 76
+          Height = 29
+          Top = 94
           Width = 175
           OnKeyDown = edtPopupHotkeyKeyDown
           ReadOnly = True
@@ -264,8 +265,8 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = edtPopupHotkey
           AnchorSideTop.Side = asrCenter
           Left = 184
-          Height = 25
-          Top = 75
+          Height = 31
+          Top = 93
           Width = 75
           AutoSize = True
           BorderSpacing.Left = 2
@@ -278,9 +279,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideLeft.Control = Panel5
           AnchorSideTop.Control = Panel5
           Left = 7
-          Height = 19
+          Height = 25
           Top = 0
-          Width = 233
+          Width = 300
           BorderSpacing.Left = 7
           Caption = 'Don''t support Cheat Engine (or yourself)'
           Checked = True
@@ -295,23 +296,23 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideRight.Control = Panel5
           AnchorSideRight.Side = asrBottom
           Left = 7
-          Height = 169
-          Top = 99
-          Width = 252
+          Height = 205
+          Top = 123
+          Width = 300
           Anchors = [akTop, akLeft, akRight]
           AutoSize = True
           Caption = 'Automated gui config options'
-          ClientHeight = 149
-          ClientWidth = 248
+          ClientHeight = 179
+          ClientWidth = 296
           TabOrder = 5
           object cbCanResize: TCheckBox
             AnchorSideLeft.Control = Button1
             AnchorSideTop.Control = Button1
             AnchorSideTop.Side = asrBottom
             Left = 6
-            Height = 19
-            Top = 130
-            Width = 142
+            Height = 25
+            Top = 154
+            Width = 183
             Caption = 'User can resize window'
             Checked = True
             OnChange = cbCanResizeChange
@@ -326,8 +327,8 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideRight.Side = asrBottom
             Left = 6
             Height = 50
-            Top = 53
-            Width = 234
+            Top = 71
+            Width = 282
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Right = 8
             Lines.Strings = (
@@ -342,9 +343,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideTop.Control = edtCaption
             AnchorSideTop.Side = asrBottom
             Left = 6
-            Height = 15
-            Top = 38
-            Width = 58
+            Height = 21
+            Top = 50
+            Width = 74
             Caption = 'About text:'
             ParentColor = False
           end
@@ -353,9 +354,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideTop.Control = mAbout
             AnchorSideTop.Side = asrBottom
             Left = 6
-            Height = 25
-            Top = 105
-            Width = 68
+            Height = 31
+            Top = 123
+            Width = 81
             AutoSize = True
             BorderSpacing.Top = 2
             Caption = 'Set Icon'
@@ -366,10 +367,10 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideLeft.Control = Button1
             AnchorSideLeft.Side = asrBottom
             AnchorSideTop.Control = Button1
-            Left = 77
-            Height = 25
-            Top = 105
-            Width = 103
+            Left = 90
+            Height = 31
+            Top = 123
+            Width = 129
             AutoSize = True
             BorderSpacing.Left = 3
             Caption = 'Set Side Image'
@@ -383,9 +384,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideRight.Control = GroupBox2
             AnchorSideRight.Side = asrBottom
             Left = 6
-            Height = 23
-            Top = 15
-            Width = 234
+            Height = 29
+            Top = 21
+            Width = 282
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Right = 8
             OnChange = edtCaptionChange
@@ -396,9 +397,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideLeft.Control = GroupBox2
             AnchorSideTop.Control = GroupBox2
             Left = 6
-            Height = 15
+            Height = 21
             Top = 0
-            Width = 23
+            Width = 29
             BorderSpacing.Left = 6
             Caption = 'Title'
             ParentColor = False
@@ -409,9 +410,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = GroupBox2
           AnchorSideTop.Side = asrBottom
           Left = 7
-          Height = 19
-          Top = 268
-          Width = 124
+          Height = 25
+          Top = 328
+          Width = 155
           Caption = 'Play mod music file'
           OnChange = cbPlayXMChange
           TabOrder = 6
@@ -422,9 +423,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Side = asrBottom
           AnchorSideRight.Control = sbPlayStopXM
           Left = 7
-          Height = 23
-          Top = 287
-          Width = 225
+          Height = 29
+          Top = 353
+          Width = 273
           DialogOptions = []
           Filter = 'Module files|*.669;*.amf;*.dsm;*.far;*.gdm;*.imf;*.it;*.med;*.m15;*.mod;*.mtm;*.okt;*.stm;*.stx;*.s3m;*.ult;*.uni;*.xm'
           FilterIndex = 0
@@ -445,9 +446,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Side = asrCenter
           AnchorSideRight.Control = GroupBox2
           AnchorSideRight.Side = asrBottom
-          Left = 236
+          Left = 284
           Height = 22
-          Top = 287
+          Top = 356
           Width = 23
           Anchors = [akTop, akRight]
           Enabled = False
@@ -460,24 +461,24 @@ object frmTrainerGenerator: TfrmTrainerGenerator
         AnchorSideTop.Control = Panel8
         AnchorSideRight.Control = Panel8
         AnchorSideRight.Side = asrBottom
-        Left = 259
-        Height = 285
+        Left = 307
+        Height = 351
         Top = 0
-        Width = 234
+        Width = 276
         Anchors = [akTop, akLeft, akRight]
         AutoSize = True
         BevelOuter = bvNone
-        ClientHeight = 285
-        ClientWidth = 234
+        ClientHeight = 351
+        ClientWidth = 276
         TabOrder = 1
         object Label1: TLabel
           AnchorSideLeft.Control = cbProtect
           AnchorSideTop.Control = cbProtect
           AnchorSideTop.Side = asrBottom
           Left = 8
-          Height = 15
-          Top = 173
-          Width = 165
+          Height = 21
+          Top = 209
+          Width = 218
           Caption = 'Freeze interval (in milliseconds)'
           ParentColor = False
         end
@@ -488,9 +489,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideRight.Control = Panel7
           AnchorSideRight.Side = asrBottom
           Left = 8
-          Height = 23
-          Top = 188
-          Width = 223
+          Height = 29
+          Top = 230
+          Width = 265
           Anchors = [akTop, akLeft, akRight]
           BorderSpacing.Right = 3
           TabOrder = 0
@@ -501,9 +502,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = rbStopWhenFocusLost
           AnchorSideTop.Side = asrBottom
           Left = 8
-          Height = 19
-          Top = 57
-          Width = 198
+          Height = 25
+          Top = 75
+          Width = 251
           Caption = 'Play sound on activate/deactivate'
           OnChange = cbPlaySoundOnActionChange
           TabOrder = 1
@@ -513,10 +514,10 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideLeft.Side = asrCenter
           AnchorSideTop.Control = cbConfigD3DHook
           AnchorSideTop.Side = asrBottom
-          Left = 25
-          Height = 25
-          Top = 260
-          Width = 185
+          Left = 20
+          Height = 31
+          Top = 320
+          Width = 236
           AutoSize = True
           BorderSpacing.Top = 5
           Caption = 'Design userinterface manually'
@@ -528,10 +529,10 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = btnAddSounds
           AnchorSideTop.Side = asrBottom
           Left = 8
-          Height = 19
+          Height = 25
           Hint = 'Will encrypt the generated cetrainer file and when Cheat Engine loads this file back it will destroy the main form preventing the user from doing anything with it.'#13#10'Does not affect the standalone trainer because that one is protected by default'
-          Top = 154
-          Width = 209
+          Top = 184
+          Width = 268
           BorderSpacing.Top = 3
           Caption = 'Protect trainer from editing/reading'
           Checked = True
@@ -545,9 +546,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideLeft.Control = Panel7
           AnchorSideTop.Control = Panel7
           Left = 8
-          Height = 19
+          Height = 25
           Top = 0
-          Width = 118
+          Width = 149
           BorderSpacing.Left = 8
           Caption = 'Stop playing when'
           Checked = True
@@ -561,9 +562,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = cbStopPlaying
           AnchorSideTop.Side = asrBottom
           Left = 24
-          Height = 19
-          Top = 19
-          Width = 150
+          Height = 25
+          Top = 25
+          Width = 190
           BorderSpacing.Left = 16
           Caption = 'Game has been attached'
           Checked = True
@@ -576,9 +577,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = rbStopWhenAttached
           AnchorSideTop.Side = asrBottom
           Left = 24
-          Height = 19
-          Top = 38
-          Width = 118
+          Height = 25
+          Top = 50
+          Width = 149
           Caption = 'Trainer loses focus'
           Enabled = False
           TabOrder = 6
@@ -588,9 +589,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = edtFreezeInterval
           AnchorSideTop.Side = asrBottom
           Left = 8
-          Height = 19
-          Top = 211
-          Width = 119
+          Height = 25
+          Top = 259
+          Width = 152
           Caption = 'Use Direct3D Hook'
           OnChange = cbUseD3DHookChange
           TabOrder = 7
@@ -600,9 +601,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Control = cbUseD3DHook
           AnchorSideTop.Side = asrBottom
           Left = 8
-          Height = 25
-          Top = 230
-          Width = 79
+          Height = 31
+          Top = 284
+          Width = 95
           AutoSize = True
           Caption = 'Configure'
           Enabled = False
@@ -614,10 +615,10 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideLeft.Side = asrCenter
           AnchorSideTop.Control = Panel6
           AnchorSideTop.Side = asrBottom
-          Left = 73
-          Height = 25
-          Top = 126
-          Width = 97
+          Left = 70
+          Height = 31
+          Top = 150
+          Width = 118
           AutoSize = True
           BorderSpacing.Top = 2
           Caption = 'Add sound(s)'
@@ -631,21 +632,21 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           AnchorSideTop.Side = asrBottom
           Left = 8
           Height = 48
-          Top = 76
-          Width = 226
+          Top = 100
+          Width = 243
           AutoSize = True
           BevelOuter = bvNone
           ClientHeight = 48
-          ClientWidth = 226
+          ClientWidth = 243
           TabOrder = 10
           object lblActivateSound: TLabel
             AnchorSideTop.Control = cbActivateSound
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = cbActivateSound
-            Left = 12
-            Height = 15
-            Top = 4
-            Width = 43
+            Left = 17
+            Height = 21
+            Top = 1
+            Width = 55
             Anchors = [akTop, akRight]
             BorderSpacing.Right = 3
             Caption = 'Activate'
@@ -657,9 +658,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = cbDeactivateSound
             Left = 0
-            Height = 15
-            Top = 29
-            Width = 55
+            Height = 21
+            Top = 26
+            Width = 72
             Anchors = [akTop, akRight]
             BorderSpacing.Right = 3
             Caption = 'Deactivate'
@@ -671,14 +672,14 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideTop.Control = cbActivateSound
             AnchorSideTop.Side = asrBottom
             AnchorSideRight.Control = sbPlayDeactivate
-            Left = 58
+            Left = 75
             Height = 23
             Top = 25
             Width = 142
             Anchors = [akTop, akLeft, akRight]
             BorderSpacing.Top = 2
             Enabled = False
-            ItemHeight = 15
+            ItemHeight = 21
             ItemIndex = 0
             Items.Strings = (
               'Deactivate'
@@ -690,13 +691,13 @@ object frmTrainerGenerator: TfrmTrainerGenerator
           object cbActivateSound: TComboBox
             AnchorSideTop.Control = Panel6
             AnchorSideRight.Control = sbPlayActivate
-            Left = 58
+            Left = 75
             Height = 23
             Top = 0
             Width = 142
             Anchors = [akTop, akRight]
             Enabled = False
-            ItemHeight = 15
+            ItemHeight = 21
             ItemIndex = 0
             Items.Strings = (
               'Activate'
@@ -710,7 +711,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = Panel6
             AnchorSideRight.Side = asrBottom
-            Left = 200
+            Left = 217
             Height = 22
             Top = 0
             Width = 23
@@ -760,7 +761,7 @@ object frmTrainerGenerator: TfrmTrainerGenerator
             AnchorSideTop.Side = asrCenter
             AnchorSideRight.Control = Panel6
             AnchorSideRight.Side = asrBottom
-            Left = 200
+            Left = 217
             Height = 22
             Top = 25
             Width = 23
@@ -813,22 +814,22 @@ object frmTrainerGenerator: TfrmTrainerGenerator
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = Panel8
       AnchorSideTop.Side = asrBottom
-      Left = 146
-      Height = 44
-      Top = 314
-      Width = 201
+      Left = 176
+      Height = 56
+      Top = 386
+      Width = 230
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 44
-      ClientWidth = 201
+      ClientHeight = 56
+      ClientWidth = 230
       TabOrder = 1
       object Label5: TLabel
         AnchorSideLeft.Control = cbOutput
         AnchorSideTop.Control = Panel9
-        Left = 115
-        Height = 15
+        Left = 144
+        Height = 21
         Top = 4
-        Width = 38
+        Width = 49
         BorderSpacing.Top = 4
         Caption = 'Output'
         ParentColor = False
@@ -838,12 +839,12 @@ object frmTrainerGenerator: TfrmTrainerGenerator
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = Label5
         AnchorSideTop.Side = asrBottom
-        Left = 115
+        Left = 144
         Height = 23
-        Top = 19
+        Top = 25
         Width = 86
         BorderSpacing.Left = 5
-        ItemHeight = 15
+        ItemHeight = 21
         ItemIndex = 1
         Items.Strings = (
           'Script only'
@@ -861,10 +862,10 @@ object frmTrainerGenerator: TfrmTrainerGenerator
         AnchorSideTop.Control = cbOutput
         AnchorSideRight.Side = asrBottom
         Left = 0
-        Height = 25
+        Height = 31
         Hint = 'Generates the trainer script and saves the current table as a .CETRAINER'
-        Top = 19
-        Width = 110
+        Top = 25
+        Width = 139
         AutoSize = True
         BorderSpacing.Right = 5
         Caption = 'Generate trainer'
@@ -883,9 +884,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
-      Left = 260
+      Left = 307
       Height = 0
-      Top = 412
+      Top = 506
       Width = 0
       Anchors = [akBottom]
       AutoSize = True
@@ -895,9 +896,9 @@ object frmTrainerGenerator: TfrmTrainerGenerator
     end
     object Label6: TLabel
       Left = 0
-      Height = 30
-      Top = 382
-      Width = 493
+      Height = 63
+      Top = 443
+      Width = 583
       Align = alBottom
       Caption = 'Tip: The trainer generator is a tool for beginners. It is recommended to learn lua and the formdesigner and save as .exe manually to experience the full power of a Cheat Engine trainer'
       Layout = tlBottom

@@ -1,22 +1,23 @@
 object frmChangedAddresses: TfrmChangedAddresses
   Left = 607
-  Height = 285
+  Height = 325
   Top = 128
-  Width = 411
+  Width = 505
   Caption = 'Changed Addresses'
-  ClientHeight = 285
-  ClientWidth = 411
+  ClientHeight = 325
+  ClientWidth = 505
+  Font.Height = -16
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object lblInfo: TLabel
     Left = 0
-    Height = 15
+    Height = 21
     Top = 0
-    Width = 411
+    Width = 505
     Align = alTop
     Caption = 'The following addresses have been changed by the code you selected'
     ParentColor = False
@@ -24,20 +25,20 @@ object frmChangedAddresses: TfrmChangedAddresses
   end
   object Panel1: TPanel
     Left = 0
-    Height = 33
-    Top = 252
-    Width = 411
+    Height = 39
+    Top = 286
+    Width = 505
     Align = alBottom
     Anchors = [akRight, akBottom]
     AutoSize = True
-    ClientHeight = 33
-    ClientWidth = 411
+    ClientHeight = 39
+    ClientWidth = 505
     TabOrder = 0
     object OKButton: TButton
       AnchorSideLeft.Control = Panel1
       AnchorSideTop.Control = Panel1
       Left = 4
-      Height = 25
+      Height = 31
       Top = 4
       Width = 90
       AutoSize = True
@@ -54,13 +55,13 @@ object frmChangedAddresses: TfrmChangedAddresses
       AnchorSideTop.Control = OKButton
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 228
+      Left = 322
       Height = 23
       Top = 4
       Width = 179
       Anchors = [akTop, akRight]
       BorderSpacing.Right = 3
-      ItemHeight = 15
+      ItemHeight = 21
       ItemIndex = 2
       Items.Strings = (
         'Byte'
@@ -76,9 +77,9 @@ object frmChangedAddresses: TfrmChangedAddresses
   end
   object Changedlist: TListView
     Left = 0
-    Height = 237
-    Top = 15
-    Width = 411
+    Height = 265
+    Top = 21
+    Width = 505
     Align = alClient
     Columns = <    
       item

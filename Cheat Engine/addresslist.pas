@@ -83,7 +83,6 @@ type
     procedure DragEnd(Sender, Target: TObject; X,Y: Integer);
     procedure TreeviewOnCollapse(Sender: TObject; Node: TTreeNode; var AllowCollapse: Boolean);
     procedure TreeviewOnExpand(Sender: TObject; Node: TTreeNode; var AllowExpansion: Boolean);
-    procedure TreeviewDblClick(Sender: TObject);
     procedure TreeviewMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 
    // procedure TreeviewKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
@@ -118,6 +117,7 @@ type
   public
     //needsToReinterpret: boolean;
     procedure getAddressList(list: Tstrings);
+    procedure TreeviewDblClick(Sender: TObject);
 
     function focused:boolean; override;
 
@@ -886,10 +886,10 @@ procedure TAddresslist.doValueChange;
 begin
   if treeview.selected<>nil then
   begin
-    if SelCount=1 then
-      valueclick(treeview.selected)
-    else
-      valuedblclick(treeview.selected);
+//    if SelCount=1 then
+//      valueclick(treeview.selected)
+//    else
+    valuedblclick(treeview.selected);
   end;
 end;
 
@@ -2179,6 +2179,8 @@ begin
 
   treeview:=TTreeviewWithScroll.create(self); //TTreeview.create(self);
 
+  self.Font.Size:=12;
+
   treeview.BorderStyle:=bsNone;
   treeview.BorderWidth:=0;;
 
@@ -2236,29 +2238,29 @@ begin
   with header.Sections.Add do
   begin
     Text:=rsActive;
-    Width:=40;
-    MinWidth:=5;
+    Width:=60;
+    MinWidth:=60;
   end;
 
   with header.Sections.Add do
   begin
     Text:=rsDescription;
-    Width:=160;
-    MinWidth:=5;
+    Width:=180;
+    MinWidth:=180;
   end;
 
   with header.Sections.Add do
   begin
     Text:=rsAddress;
-    Width:=85;
-    MinWidth:=5;
+    Width:=90;
+    MinWidth:=90;
   end;
 
   with header.Sections.Add do
   begin
     Text:=rsType;
-    Width:=60;
-    MinWidth:=5;
+    Width:=75;
+    MinWidth:=75;
   end;
 
   with header.Sections.Add do

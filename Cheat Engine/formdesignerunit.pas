@@ -1107,7 +1107,7 @@ begin
 
     oid.OnSelectPersistentsInOI:=ObjectInspectorSelectionChange;
 
-    oid.DeletePopupmenuItem.OnClick:=oidOnDelete;
+    // MK2k oid.DeletePopupmenuItem.OnClick:=oidOnDelete;
     oid.ComponentTree.OnKeyDown:=oidComponentTreeKeyDown;
 
     oid.Selection.Add(f);

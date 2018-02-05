@@ -1,18 +1,19 @@
 object frmCodecaveScanner: TfrmCodecaveScanner
   Left = 528
-  Height = 324
+  Height = 335
   Top = 213
-  Width = 279
+  Width = 347
   AutoSize = True
   Caption = 'Scan for codecaves'
-  ClientHeight = 324
-  ClientWidth = 279
+  ClientHeight = 335
+  ClientWidth = 347
+  Font.Height = -16
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object lbCodecaveList: TListBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -20,7 +21,7 @@ object frmCodecaveScanner: TfrmCodecaveScanner
     Left = 0
     Height = 288
     Top = 0
-    Width = 155
+    Width = 223
     Anchors = [akTop, akLeft, akRight]
     Font.CharSet = ANSI_CHARSET
     Font.Name = 'Courier New'
@@ -34,14 +35,14 @@ object frmCodecaveScanner: TfrmCodecaveScanner
   end
   object Panel1: TPanel
     AnchorSideTop.Control = Owner
-    Left = 155
-    Height = 185
+    Left = 223
+    Height = 209
     Top = 0
     Width = 124
     Anchors = [akTop, akRight]
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 185
+    ClientHeight = 209
     ClientWidth = 124
     TabOrder = 1
     object Label1: TLabel
@@ -50,7 +51,7 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       Left = 2
-      Height = 15
+      Height = 21
       Top = 0
       Width = 120
       Alignment = taCenter
@@ -67,8 +68,8 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       Left = 2
-      Height = 15
-      Top = 43
+      Height = 21
+      Top = 49
       Width = 120
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
@@ -85,8 +86,8 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
       Left = 2
-      Height = 15
-      Top = 86
+      Height = 21
+      Top = 98
       Width = 120
       Alignment = taCenter
       Anchors = [akTop, akLeft, akRight]
@@ -102,8 +103,8 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideTop.Control = editSize
       AnchorSideTop.Side = asrBottom
       Left = 25
-      Height = 25
-      Top = 130
+      Height = 31
+      Top = 148
       Width = 75
       AutoSize = True
       BorderSpacing.Top = 3
@@ -122,7 +123,7 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideRight.Side = asrBottom
       Left = 2
       Height = 26
-      Top = 15
+      Top = 21
       Width = 120
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 2
@@ -144,7 +145,7 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideRight.Side = asrBottom
       Left = 2
       Height = 26
-      Top = 58
+      Top = 70
       Width = 120
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 2
@@ -166,7 +167,7 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideRight.Side = asrBottom
       Left = 2
       Height = 26
-      Top = 101
+      Top = 119
       Width = 120
       BorderSpacing.Left = 2
       BorderSpacing.Right = 2
@@ -186,14 +187,14 @@ object frmCodecaveScanner: TfrmCodecaveScanner
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 0
-    Height = 36
+    Height = 42
     Top = 288
-    Width = 279
+    Width = 347
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 36
-    ClientWidth = 279
+    ClientHeight = 42
+    ClientWidth = 347
     TabOrder = 2
     object cbNoExecute: TCheckBox
       AnchorSideLeft.Control = Panel2
@@ -201,9 +202,9 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideRight.Control = Panel2
       AnchorSideRight.Side = asrBottom
       Left = 0
-      Height = 19
+      Height = 25
       Top = 0
-      Width = 279
+      Width = 347
       Anchors = [akTop, akLeft, akRight]
       Caption = 'Also scan non-executable read-only memory'
       Checked = True
@@ -216,8 +217,8 @@ object frmCodecaveScanner: TfrmCodecaveScanner
       AnchorSideTop.Side = asrBottom
       Left = 0
       Height = 17
-      Top = 19
-      Width = 279
+      Top = 25
+      Width = 347
       Anchors = [akTop, akLeft, akRight]
       TabOrder = 1
     end

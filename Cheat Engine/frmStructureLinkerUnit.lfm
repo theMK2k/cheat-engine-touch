@@ -1,22 +1,23 @@
 object frmStructureLinker: TfrmStructureLinker
   Left = 468
-  Height = 244
+  Height = 303
   Top = 270
-  Width = 457
+  Width = 652
   AutoSize = True
   BorderStyle = bsSingle
   Caption = 'Structure linker'
-  ClientHeight = 244
-  ClientWidth = 457
+  ClientHeight = 303
+  ClientWidth = 652
+  Font.Height = -16
   OnCreate = FormCreate
   OnShow = FormShow
   PopupMode = pmAuto
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object sgStructureAddress: TStringGrid
     Left = 0
-    Height = 158
-    Top = 55
-    Width = 457
+    Height = 193
+    Top = 73
+    Width = 652
     Align = alClient
     ColCount = 2
     Columns = <    
@@ -34,32 +35,33 @@ object frmStructureLinker: TfrmStructureLinker
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goEditing, goAlwaysShowEditor, goSmoothScroll]
     RowCount = 1
     TabOrder = 0
+    TitleFont.Height = -16
   end
   object Panel1: TPanel
     Left = 0
-    Height = 31
-    Top = 213
-    Width = 457
+    Height = 37
+    Top = 266
+    Width = 652
     Align = alBottom
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 31
-    ClientWidth = 457
+    ClientHeight = 37
+    ClientWidth = 652
     TabOrder = 1
     OnResize = Panel1Resize
     object Panel3: TPanel
       AnchorSideLeft.Control = Panel1
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = Panel1
-      Left = 150
-      Height = 25
+      Left = 248
+      Height = 31
       Top = 3
       Width = 157
       AutoSize = True
       BorderSpacing.Top = 3
       BorderSpacing.Bottom = 3
       BevelOuter = bvNone
-      ClientHeight = 25
+      ClientHeight = 31
       ClientWidth = 157
       TabOrder = 0
       object btnCancel: TButton
@@ -67,7 +69,7 @@ object frmStructureLinker: TfrmStructureLinker
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = btnLink
         Left = 82
-        Height = 25
+        Height = 31
         Top = 0
         Width = 75
         AutoSize = True
@@ -82,7 +84,7 @@ object frmStructureLinker: TfrmStructureLinker
         AnchorSideLeft.Control = Panel3
         AnchorSideTop.Control = Panel3
         Left = 0
-        Height = 25
+        Height = 31
         Top = 0
         Width = 75
         AutoSize = True
@@ -96,22 +98,22 @@ object frmStructureLinker: TfrmStructureLinker
   end
   object Panel2: TPanel
     Left = 0
-    Height = 55
+    Height = 73
     Top = 0
-    Width = 457
+    Width = 652
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 55
-    ClientWidth = 457
+    ClientHeight = 73
+    ClientWidth = 652
     TabOrder = 2
     object Label1: TLabel
       AnchorSideLeft.Control = Panel2
       AnchorSideTop.Control = Panel2
       Left = 2
-      Height = 15
+      Height = 21
       Top = 2
-      Width = 451
+      Width = 594
       BorderSpacing.Left = 2
       BorderSpacing.Top = 2
       Caption = 'Fill in the known addresses of these structures (Can be blank if unknown or unrelated)'
@@ -122,9 +124,9 @@ object frmStructureLinker: TfrmStructureLinker
       AnchorSideTop.Control = Label1
       AnchorSideTop.Side = asrBottom
       Left = 2
-      Height = 19
-      Top = 17
-      Width = 333
+      Height = 25
+      Top = 23
+      Width = 431
       Caption = 'Fill in pointers that point into a structure instead of the start'
       Checked = True
       State = cbChecked
@@ -135,9 +137,9 @@ object frmStructureLinker: TfrmStructureLinker
       AnchorSideTop.Control = cbNoExactMatches
       AnchorSideTop.Side = asrBottom
       Left = 2
-      Height = 19
-      Top = 36
-      Width = 140
+      Height = 25
+      Top = 48
+      Width = 178
       Caption = 'Fill in ''Local'' structures'
       TabOrder = 1
     end
@@ -145,10 +147,10 @@ object frmStructureLinker: TfrmStructureLinker
       AnchorSideLeft.Control = cbFillLocal
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = cbFillLocal
-      Left = 150
-      Height = 19
-      Top = 36
-      Width = 231
+      Left = 188
+      Height = 25
+      Top = 48
+      Width = 299
       BorderSpacing.Left = 8
       Caption = 'Override ''Local'' structures when needed'
       TabOrder = 2

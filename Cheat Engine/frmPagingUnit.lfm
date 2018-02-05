@@ -1,22 +1,22 @@
 object frmPaging: TfrmPaging
-  Left = 678
-  Height = 235
-  Top = 262
-  Width = 412
+  Left = 415
+  Height = 316
+  Top = 145
+  Width = 631
   Caption = 'Paging'
-  ClientHeight = 235
-  ClientWidth = 412
+  ClientHeight = 316
+  ClientWidth = 631
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   PopupMode = pmAuto
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object tvPage: TTreeView
     Left = 0
-    Height = 185
-    Top = 50
-    Width = 412
+    Height = 261
+    Top = 55
+    Width = 631
     Align = alClient
-    DefaultItemHeight = 18
     PopupMenu = PopupMenu1
     ReadOnly = True
     TabOrder = 0
@@ -26,22 +26,22 @@ object frmPaging: TfrmPaging
   end
   object frmPaging: TPanel
     Left = 0
-    Height = 50
+    Height = 55
     Top = 0
-    Width = 412
+    Width = 631
     Align = alTop
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 50
-    ClientWidth = 412
+    ClientHeight = 55
+    ClientWidth = 631
     TabOrder = 1
     object edtCR3: TEdit
       AnchorSideLeft.Control = Label1
       AnchorSideRight.Control = Button1
       Left = 5
-      Height = 23
+      Height = 29
       Top = 24
-      Width = 222
+      Width = 318
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Right = 4
       BorderSpacing.Bottom = 2
@@ -52,9 +52,9 @@ object frmPaging: TfrmPaging
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = Label1
       AnchorSideRight.Side = asrBottom
-      Left = 231
+      Left = 327
       Height = 25
-      Top = 23
+      Top = 26
       Width = 75
       Anchors = [akTop, akRight]
       BorderSpacing.Bottom = 2
@@ -66,9 +66,9 @@ object frmPaging: TfrmPaging
       AnchorSideLeft.Control = frmPaging
       AnchorSideTop.Control = frmPaging
       Left = 5
-      Height = 15
+      Height = 21
       Top = 3
-      Width = 301
+      Width = 397
       BorderSpacing.Left = 5
       BorderSpacing.Top = 3
       Caption = 'Fill in the physical address of the paging base (or just cr3)'
@@ -78,10 +78,10 @@ object frmPaging: TfrmPaging
       AnchorSideLeft.Control = Label1
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Label1
-      Left = 310
-      Height = 19
+      Left = 406
+      Height = 25
       Top = 3
-      Width = 92
+      Width = 116
       BorderSpacing.Left = 4
       Caption = '8-byte entries'
       TabOrder = 2
@@ -90,10 +90,10 @@ object frmPaging: TfrmPaging
       AnchorSideLeft.Control = cb8byteentries
       AnchorSideTop.Control = cb8byteentries
       AnchorSideTop.Side = asrBottom
-      Left = 310
-      Height = 19
-      Top = 22
-      Width = 51
+      Left = 406
+      Height = 25
+      Top = 28
+      Width = 62
       BorderSpacing.Bottom = 2
       Caption = '64-bit'
       OnChange = cb64bitChange

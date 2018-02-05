@@ -6216,7 +6216,7 @@ var rv: dword;
 begin
   result:=0;
 
-  SendMessageTimeout(HWND_BROADCAST, WM_SETTINGCHANGE, 0, LPARAM(pchar('Environment')), SMTO_ABORTIFHUNG, 5000, rv);
+// MK2k  SendMessageTimeout(HWND_BROADCAST, WM_SETTINGCHANGE, 0, LPARAM(pchar('Environment')), SMTO_ABORTIFHUNG, 5000, rv);
 end;
 
 var winmm: THandle=0;

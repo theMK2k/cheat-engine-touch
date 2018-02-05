@@ -1,19 +1,20 @@
 object FormFoundCodeListExtra: TFormFoundCodeListExtra
-  Left = 478
-  Height = 270
-  Top = 586
-  Width = 435
+  Left = 419
+  Height = 314
+  Top = 183
+  Width = 530
   AutoSize = True
   Caption = 'Extra info'
-  ClientHeight = 270
-  ClientWidth = 435
+  ClientHeight = 314
+  ClientWidth = 530
+  Font.Height = -16
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMenu = pmCopy
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object Panel1: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -120,36 +121,36 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
     AnchorSideTop.Control = Panel1
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 34
+    Height = 46
     Top = 107
-    Width = 62
+    Width = 77
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 34
-    ClientWidth = 62
+    ClientHeight = 46
+    ClientWidth = 77
     TabOrder = 1
     object Panel4: TPanel
       AnchorSideLeft.Control = Panel3
       AnchorSideTop.Control = Panel3
       Left = 12
-      Height = 33
+      Height = 45
       Top = 1
-      Width = 38
+      Width = 53
       AutoSize = True
       BorderSpacing.Left = 12
       BorderSpacing.Top = 1
       BorderSpacing.Right = 12
       BevelOuter = bvNone
-      ClientHeight = 33
-      ClientWidth = 38
+      ClientHeight = 45
+      ClientWidth = 53
       TabOrder = 0
       object Label6: TLabel
         AnchorSideLeft.Control = Panel4
         AnchorSideTop.Control = Panel4
         Left = 1
-        Height = 15
+        Height = 21
         Top = 1
-        Width = 33
+        Width = 48
         BorderSpacing.Left = 1
         BorderSpacing.Top = 1
         Caption = 'xxx123'
@@ -161,9 +162,9 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         AnchorSideTop.Control = Label6
         AnchorSideTop.Side = asrBottom
         Left = 2
-        Height = 15
-        Top = 17
-        Width = 36
+        Height = 21
+        Top = 23
+        Width = 51
         BorderSpacing.Left = 1
         BorderSpacing.Top = 1
         BorderSpacing.Bottom = 1
@@ -179,19 +180,19 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
     AnchorSideTop.Side = asrBottom
     Left = 0
     Height = 36
-    Top = 229
-    Width = 435
+    Top = 247
+    Width = 530
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
     BevelOuter = bvNone
     ClientHeight = 36
-    ClientWidth = 435
+    ClientWidth = 530
     TabOrder = 2
     object Button1: TButton
       AnchorSideLeft.Control = Panel5
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = Panel5
-      Left = 172
+      Left = 220
       Height = 32
       Top = 2
       Width = 90
@@ -216,15 +217,15 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
     AnchorSideRight.Side = asrBottom
     Left = 4
     Height = 60
-    Top = 146
-    Width = 431
+    Top = 158
+    Width = 526
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
     BorderSpacing.Left = 4
     BorderSpacing.Top = 5
     BevelOuter = bvNone
     ClientHeight = 60
-    ClientWidth = 431
+    ClientWidth = 526
     TabOrder = 3
     OnResize = Panel6Resize
     object pnlRegisters: TPanel
@@ -233,7 +234,7 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
       Left = 0
       Height = 60
       Top = 0
-      Width = 406
+      Width = 501
       Anchors = [akTop, akLeft, akRight]
       AutoSize = True
       BorderSpacing.Right = 4
@@ -244,7 +245,7 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
       ChildSizing.Layout = cclTopToBottomThenLeftToRight
       ChildSizing.ControlsPerLine = 3
       ClientHeight = 60
-      ClientWidth = 406
+      ClientWidth = 501
       Font.Name = 'Courier New'
       ParentFont = False
       TabOrder = 0
@@ -252,7 +253,7 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         Left = 0
         Height = 18
         Top = 0
-        Width = 122
+        Width = 154
         Caption = 'EAX=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -263,7 +264,7 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         Left = 0
         Height = 18
         Top = 21
-        Width = 122
+        Width = 154
         Caption = 'EBX=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -274,7 +275,7 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         Left = 0
         Height = 18
         Top = 42
-        Width = 122
+        Width = 154
         Caption = 'ECX=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -282,10 +283,10 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         OnMouseDown = RegisterMouseDown
       end
       object lblRDX: TLabel
-        Left = 142
+        Left = 174
         Height = 18
         Top = 0
-        Width = 122
+        Width = 154
         Caption = 'EDX=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -293,10 +294,10 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         OnMouseDown = RegisterMouseDown
       end
       object lblRSI: TLabel
-        Left = 142
+        Left = 174
         Height = 18
         Top = 21
-        Width = 122
+        Width = 154
         Caption = 'ESI=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -304,10 +305,10 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         OnMouseDown = RegisterMouseDown
       end
       object lblRDI: TLabel
-        Left = 142
+        Left = 174
         Height = 18
         Top = 42
-        Width = 122
+        Width = 154
         Caption = 'EDI=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -315,10 +316,10 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         OnMouseDown = RegisterMouseDown
       end
       object lblRBP: TLabel
-        Left = 284
+        Left = 348
         Height = 18
         Top = 0
-        Width = 122
+        Width = 153
         Caption = 'EBP=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -326,10 +327,10 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         OnMouseDown = RegisterMouseDown
       end
       object lblRSP: TLabel
-        Left = 284
+        Left = 348
         Height = 18
         Top = 21
-        Width = 122
+        Width = 153
         Caption = 'ESP=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -337,10 +338,10 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
         OnMouseDown = RegisterMouseDown
       end
       object lblRIP: TLabel
-        Left = 284
+        Left = 348
         Height = 18
         Top = 42
-        Width = 122
+        Width = 153
         Caption = 'EIP=DDDDDDDD'
         ParentColor = False
         PopupMenu = pmEmpty
@@ -354,7 +355,7 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = Panel6
       AnchorSideRight.Side = asrBottom
-      Left = 410
+      Left = 505
       Height = 60
       Top = 0
       Width = 21
@@ -402,9 +403,9 @@ object FormFoundCodeListExtra: TFormFoundCodeListExtra
     AnchorSideTop.Control = Panel6
     AnchorSideTop.Side = asrBottom
     Left = 4
-    Height = 15
-    Top = 214
-    Width = 530
+    Height = 21
+    Top = 226
+    Width = 625
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 4
     BorderSpacing.Top = 8

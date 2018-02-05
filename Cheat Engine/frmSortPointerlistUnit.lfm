@@ -1,24 +1,25 @@
 object frmSortPointerlist: TfrmSortPointerlist
-  Left = 677
-  Height = 85
-  Top = 225
-  Width = 320
+  Left = 557
+  Height = 97
+  Top = 148
+  Width = 413
   AutoSize = True
   BorderStyle = bsSingle
   Caption = 'Sorting'
-  ClientHeight = 85
-  ClientWidth = 320
+  ClientHeight = 97
+  ClientWidth = 413
   Constraints.MinWidth = 320
+  Font.Height = -16
   OnClose = FormClose
   OnDestroy = FormDestroy
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Label1: TLabel
     Left = 0
-    Height = 15
+    Height = 21
     Top = 0
-    Width = 320
+    Width = 413
     Align = alTop
     Alignment = taCenter
     Caption = 'Sorting the pointerlist. Please wait....'
@@ -29,9 +30,9 @@ object frmSortPointerlist: TfrmSortPointerlist
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = ProgressBar1
     AnchorSideTop.Side = asrBottom
-    Left = 123
+    Left = 169
     Height = 25
-    Top = 53
+    Top = 65
     Width = 75
     BorderSpacing.Top = 3
     BorderSpacing.Bottom = 3
@@ -43,9 +44,9 @@ object frmSortPointerlist: TfrmSortPointerlist
   end
   object lblTimeLeft: TLabel
     Left = 0
-    Height = 15
-    Top = 15
-    Width = 320
+    Height = 21
+    Top = 21
+    Width = 413
     Align = alTop
     Alignment = taCenter
     Caption = 'Estimated time left:'
@@ -54,8 +55,8 @@ object frmSortPointerlist: TfrmSortPointerlist
   object ProgressBar1: TProgressBar
     Left = 0
     Height = 20
-    Top = 30
-    Width = 320
+    Top = 42
+    Width = 413
     Align = alTop
     TabOrder = 1
   end

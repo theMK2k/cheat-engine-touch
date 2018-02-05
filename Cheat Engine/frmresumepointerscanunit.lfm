@@ -1,43 +1,44 @@
 object frmResumePointerscan: TfrmResumePointerscan
-  Left = 504
-  Height = 140
-  Top = 351
-  Width = 625
+  Left = 379
+  Height = 184
+  Top = 208
+  Width = 827
   AutoSize = True
   Caption = 'Resume pointerscan'
-  ClientHeight = 140
-  ClientWidth = 625
+  ClientHeight = 184
+  ClientWidth = 827
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Panel1: TPanel
-    Left = 381
-    Height = 140
+    Left = 501
+    Height = 184
     Top = 0
-    Width = 244
+    Width = 326
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 140
-    ClientWidth = 244
+    ClientHeight = 184
+    ClientWidth = 326
     TabOrder = 0
     OnResize = Panel1Resize
     object Label1: TLabel
       Left = 0
-      Height = 15
+      Height = 21
       Top = 0
-      Width = 244
+      Width = 326
       Align = alTop
       Caption = 'Rescan pointermaps'
       ParentColor = False
     end
     object ListView1: TListView
       Left = 0
-      Height = 125
-      Top = 15
-      Width = 244
+      Height = 163
+      Top = 21
+      Width = 326
       Align = alClient
       Columns = <      
         item
@@ -64,24 +65,24 @@ object frmResumePointerscan: TfrmResumePointerscan
   end
   object Panel2: TPanel
     Left = 0
-    Height = 140
+    Height = 184
     Top = 0
-    Width = 381
+    Width = 501
     Align = alLeft
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 140
-    ClientWidth = 381
+    ClientHeight = 184
+    ClientWidth = 501
     TabOrder = 1
     object cbDistributedScanning: TCheckBox
       AnchorSideLeft.Control = Label9
       AnchorSideTop.Control = edtThreadcount
       AnchorSideTop.Side = asrBottom
       Left = 8
-      Height = 19
+      Height = 25
       Hint = 'Opens a port that other systems running the pointerscanner can connect to and help out with the scan'
-      Top = 26
-      Width = 161
+      Top = 32
+      Width = 204
       Caption = 'Allow distributed scanning'
       OnChange = cbDistributedScanningChange
       ParentShowHint = False
@@ -93,9 +94,9 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = cbDistributedScanning
       AnchorSideTop.Side = asrBottom
-      Left = 49
-      Height = 23
-      Top = 45
+      Left = 56
+      Height = 29
+      Top = 57
       Width = 103
       TabOrder = 1
       Text = '52737'
@@ -105,9 +106,9 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideTop.Control = cbDistributedScanning
       AnchorSideTop.Side = asrBottom
       Left = 24
-      Height = 15
-      Top = 48
-      Width = 25
+      Height = 21
+      Top = 60
+      Width = 32
       BorderSpacing.Left = 16
       BorderSpacing.Top = 3
       Caption = 'Port:'
@@ -118,10 +119,10 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideTop.Control = edtDistributedPort
       AnchorSideTop.Side = asrBottom
       Left = 24
-      Height = 19
+      Height = 25
       Hint = 'When checked will send a broadcast message on the local network which will tell pointer scanner systems to join this scan if they are set to auto join'#13#10#13#10'You can use "Setup specific IP''s to notify" to notify systems of this scan that are outside of the local network'
-      Top = 68
-      Width = 192
+      Top = 86
+      Width = 246
       Caption = 'Broadcast that a scan has started'
       Enabled = False
       ParentShowHint = False
@@ -133,10 +134,10 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = cbBroadcast
       AnchorSideTop.Side = asrCenter
-      Left = 220
+      Left = 274
       Height = 25
-      Top = 65
-      Width = 156
+      Top = 86
+      Width = 222
       BorderSpacing.Left = 4
       BorderSpacing.Right = 5
       Caption = 'Setup specific IP''s to notify'
@@ -149,13 +150,13 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = edtThreadcount
       AnchorSideTop.Side = asrCenter
-      Left = 235
+      Left = 274
       Height = 23
-      Top = 3
+      Top = 6
       Width = 140
       BorderSpacing.Left = 4
       BorderSpacing.Right = 5
-      ItemHeight = 15
+      ItemHeight = 21
       ItemIndex = 3
       Items.Strings = (
         'Idle'
@@ -175,8 +176,8 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Panel2
       AnchorSideRight.Side = asrBottom
-      Left = 134
-      Height = 23
+      Left = 173
+      Height = 29
       Top = 3
       Width = 97
       BorderSpacing.Top = 3
@@ -189,9 +190,9 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = edtThreadcount
       Left = 8
-      Height = 15
+      Height = 21
       Top = 7
-      Width = 126
+      Width = 165
       BorderSpacing.Left = 8
       Caption = 'Nr of threads scanning: '
       ParentColor = False
@@ -201,9 +202,9 @@ object frmResumePointerscan: TfrmResumePointerscan
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = btnNotifySpecificIPs
       AnchorSideTop.Side = asrBottom
-      Left = 112
+      Left = 172
       Height = 25
-      Top = 98
+      Top = 119
       Width = 157
       AutoSize = True
       BorderSpacing.Top = 8

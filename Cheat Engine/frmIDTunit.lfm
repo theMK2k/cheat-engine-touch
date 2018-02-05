@@ -6,18 +6,18 @@ object frmIDT: TfrmIDT
   Caption = 'IDT'
   ClientHeight = 321
   ClientWidth = 299
+  Font.Height = -16
   OnClose = FormClose
   OnCreate = FormCreate
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object tvIDT: TTreeView
     Left = 0
     Height = 321
     Top = 0
     Width = 299
     Align = alClient
-    DefaultItemHeight = 18
     Indent = 19
     ReadOnly = True
     TabOrder = 0

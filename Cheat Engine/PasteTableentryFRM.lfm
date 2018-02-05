@@ -1,37 +1,38 @@
 object frmPasteTableentry: TfrmPasteTableentry
-  Left = 730
-  Height = 133
-  Top = 406
-  Width = 330
+  Left = 569
+  Height = 178
+  Top = 147
+  Width = 430
   AutoSize = True
   Caption = 'Paste table entries'
-  ClientHeight = 133
-  ClientWidth = 330
+  ClientHeight = 178
+  ClientWidth = 430
+  Font.Height = -16
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object GroupBox1: TGroupBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Panel1
     Left = 0
-    Height = 101
+    Height = 131
     Top = 0
-    Width = 163
+    Width = 213
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
     Caption = 'Description'
-    ClientHeight = 81
-    ClientWidth = 159
+    ClientHeight = 105
+    ClientWidth = 209
     TabOrder = 0
     object Label1: TLabel
       AnchorSideLeft.Control = GroupBox1
       AnchorSideTop.Control = GroupBox1
       Left = 0
-      Height = 15
+      Height = 21
       Top = 0
-      Width = 63
+      Width = 80
       Caption = 'Text to find:'
       ParentColor = False
     end
@@ -40,9 +41,9 @@ object frmPasteTableentry: TfrmPasteTableentry
       AnchorSideTop.Control = edtFind
       AnchorSideTop.Side = asrBottom
       Left = 0
-      Height = 15
-      Top = 38
-      Width = 70
+      Height = 21
+      Top = 50
+      Width = 91
       Caption = 'Replace with:'
       ParentColor = False
     end
@@ -53,9 +54,9 @@ object frmPasteTableentry: TfrmPasteTableentry
       AnchorSideRight.Control = GroupBox1
       AnchorSideRight.Side = asrBottom
       Left = 3
-      Height = 23
-      Top = 15
-      Width = 153
+      Height = 29
+      Top = 21
+      Width = 203
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 3
       BorderSpacing.Right = 3
@@ -68,9 +69,9 @@ object frmPasteTableentry: TfrmPasteTableentry
       AnchorSideRight.Control = GroupBox1
       AnchorSideRight.Side = asrBottom
       Left = 3
-      Height = 23
-      Top = 53
-      Width = 153
+      Height = 29
+      Top = 71
+      Width = 203
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 3
       BorderSpacing.Right = 3
@@ -85,22 +86,22 @@ object frmPasteTableentry: TfrmPasteTableentry
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = GroupBox1
     AnchorSideBottom.Side = asrBottom
-    Left = 167
-    Height = 100
+    Left = 217
+    Height = 130
     Top = 1
-    Width = 163
+    Width = 213
     Anchors = [akTop, akLeft, akRight, akBottom]
     Caption = 'Address'
-    ClientHeight = 80
-    ClientWidth = 159
+    ClientHeight = 104
+    ClientWidth = 209
     TabOrder = 1
     OnClick = GroupBox2Click
     object Label3: TLabel
       AnchorSideTop.Control = GroupBox2
       Left = 8
-      Height = 15
+      Height = 21
       Top = 0
-      Width = 99
+      Width = 130
       Caption = 'Adjust address by: '
       ParentColor = False
     end
@@ -111,9 +112,9 @@ object frmPasteTableentry: TfrmPasteTableentry
       AnchorSideRight.Control = GroupBox2
       AnchorSideRight.Side = asrBottom
       Left = 3
-      Height = 23
-      Top = 15
-      Width = 153
+      Height = 29
+      Top = 21
+      Width = 203
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Left = 3
       BorderSpacing.Right = 3
@@ -125,9 +126,9 @@ object frmPasteTableentry: TfrmPasteTableentry
     AnchorSideTop.Control = GroupBox1
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Panel1
-    Left = 88
-    Height = 25
-    Top = 105
+    Left = 138
+    Height = 31
+    Top = 135
     Width = 75
     Anchors = [akTop, akRight]
     AutoSize = True
@@ -143,9 +144,9 @@ object frmPasteTableentry: TfrmPasteTableentry
     AnchorSideLeft.Control = Panel1
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Button1
-    Left = 167
-    Height = 25
-    Top = 105
+    Left = 217
+    Height = 31
+    Top = 135
     Width = 75
     AutoSize = True
     Cancel = True
@@ -157,7 +158,7 @@ object frmPasteTableentry: TfrmPasteTableentry
   object Panel1: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
-    Left = 163
+    Left = 213
     Height = 70
     Top = 8
     Width = 4

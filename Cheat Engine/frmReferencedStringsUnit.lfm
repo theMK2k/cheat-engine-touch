@@ -1,21 +1,22 @@
 object frmReferencedStrings: TfrmReferencedStrings
-  Left = 802
-  Height = 308
-  Top = 379
-  Width = 616
+  Left = 434
+  Height = 416
+  Top = 190
+  Width = 718
   Caption = 'Referenced Strings'
-  ClientHeight = 288
-  ClientWidth = 616
+  ClientHeight = 396
+  ClientWidth = 718
+  Font.Height = -16
   Menu = MainMenu1
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object Splitter1: TSplitter
-    Left = 490
-    Height = 288
+    Left = 592
+    Height = 396
     Top = 0
     Width = 5
     Align = alRight
@@ -23,9 +24,9 @@ object frmReferencedStrings: TfrmReferencedStrings
   end
   object lvStringlist: TListView
     Left = 0
-    Height = 288
+    Height = 396
     Top = 0
-    Width = 490
+    Width = 592
     Align = alClient
     Columns = <    
       item
@@ -52,8 +53,8 @@ object frmReferencedStrings: TfrmReferencedStrings
     OnSelectItem = lvStringlistSelectItem
   end
   object lbReflist: TListBox
-    Left = 495
-    Height = 288
+    Left = 597
+    Height = 396
     Top = 0
     Width = 121
     Align = alRight

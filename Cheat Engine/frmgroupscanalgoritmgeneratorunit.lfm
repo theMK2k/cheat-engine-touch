@@ -1,17 +1,18 @@
 object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
-  Left = 555
-  Height = 331
-  Top = 330
-  Width = 357
+  Left = 407
+  Height = 414
+  Top = 122
+  Width = 451
   Caption = 'Generate groupscan command'
-  ClientHeight = 331
-  ClientWidth = 357
+  ClientHeight = 414
+  ClientWidth = 451
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object ScrollBox1: TScrollBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = lblWildcardExplanation
@@ -20,9 +21,9 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = Panel1
     Left = 14
-    Height = 141
-    Top = 15
-    Width = 329
+    Height = 176
+    Top = 21
+    Width = 423
     HorzScrollBar.Page = 1
     HorzScrollBar.Tracking = True
     VertScrollBar.Increment = 1
@@ -40,31 +41,31 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Owner
-    Left = 70
-    Height = 15
+    Left = 82
+    Height = 21
     Top = 0
-    Width = 216
+    Width = 286
     Caption = 'Leave a value empty or use * for wildcard'
     ParentColor = False
   end
   object Panel1: TPanel
     Left = 0
-    Height = 161
-    Top = 170
-    Width = 357
+    Height = 203
+    Top = 211
+    Width = 451
     Align = alBottom
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 161
-    ClientWidth = 357
+    ClientHeight = 203
+    ClientWidth = 451
     TabOrder = 1
     object edtBlocksize: TEdit
       AnchorSideLeft.Control = lblBlocksize
       AnchorSideTop.Control = lblBlocksize
       AnchorSideTop.Side = asrBottom
       Left = 16
-      Height = 23
-      Top = 21
+      Height = 29
+      Top = 27
       Width = 80
       Enabled = False
       TabOrder = 0
@@ -73,9 +74,9 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideLeft.Control = Panel1
       AnchorSideTop.Control = Panel1
       Left = 16
-      Height = 15
+      Height = 21
       Top = 6
-      Width = 48
+      Width = 63
       BorderSpacing.Left = 16
       BorderSpacing.Top = 6
       Caption = 'Blocksize'
@@ -86,9 +87,9 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideTop.Control = edtBlockalignment
       AnchorSideTop.Side = asrBottom
       Left = 16
-      Height = 19
-      Top = 82
-      Width = 85
+      Height = 25
+      Top = 106
+      Width = 106
       Caption = 'Out of order'
       OnChange = cbOutOfOrderChange
       TabOrder = 1
@@ -98,9 +99,9 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideTop.Control = cbOutOfOrder
       AnchorSideTop.Side = asrBottom
       Left = 32
-      Height = 19
-      Top = 101
-      Width = 133
+      Height = 25
+      Top = 131
+      Width = 167
       BorderSpacing.Left = 16
       Caption = 'Must be type-aligned'
       Checked = True
@@ -115,9 +116,9 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideTop.Control = edtBlocksize
       AnchorSideTop.Side = asrCenter
       Left = 100
-      Height = 15
-      Top = 25
-      Width = 34
+      Height = 21
+      Top = 31
+      Width = 44
       BorderSpacing.Left = 4
       Caption = 'lblMin'
       ParentColor = False
@@ -128,8 +129,8 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideTop.Control = lblBlockAlignment
       AnchorSideTop.Side = asrBottom
       Left = 16
-      Height = 23
-      Top = 59
+      Height = 29
+      Top = 77
       Width = 80
       OnChange = edtBlockalignmentChange
       TabOrder = 3
@@ -140,9 +141,9 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideTop.Control = edtBlocksize
       AnchorSideTop.Side = asrBottom
       Left = 16
-      Height = 15
-      Top = 44
-      Width = 86
+      Height = 21
+      Top = 56
+      Width = 111
       Caption = 'Block alignment'
       ParentColor = False
     end
@@ -152,9 +153,9 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideTop.Control = edtBlockalignment
       AnchorSideTop.Side = asrCenter
       Left = 100
-      Height = 15
-      Top = 63
-      Width = 119
+      Height = 21
+      Top = 81
+      Width = 157
       BorderSpacing.Left = 4
       Caption = 'Must be dividable by 4'
       ParentColor = False
@@ -165,15 +166,15 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = cbTypeAligned
       AnchorSideTop.Side = asrBottom
-      Left = 99
-      Height = 25
-      Top = 128
+      Left = 146
+      Height = 31
+      Top = 164
       Width = 158
       AutoSize = True
       BorderSpacing.Top = 8
       BorderSpacing.Bottom = 8
       BevelOuter = bvNone
-      ClientHeight = 25
+      ClientHeight = 31
       ClientWidth = 158
       TabOrder = 4
       object btnCancel: TButton
@@ -181,7 +182,7 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = btnOK
         Left = 83
-        Height = 25
+        Height = 31
         Top = 0
         Width = 75
         AutoSize = True
@@ -196,7 +197,7 @@ object frmGroupScanAlgoritmGenerator: TfrmGroupScanAlgoritmGenerator
         AnchorSideLeft.Control = Panel2
         AnchorSideTop.Control = Panel2
         Left = 0
-        Height = 25
+        Height = 31
         Top = 0
         Width = 75
         AutoSize = True

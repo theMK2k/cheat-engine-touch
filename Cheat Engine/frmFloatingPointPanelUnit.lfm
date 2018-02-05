@@ -1,41 +1,42 @@
 object frmFloatingPointPanel: TfrmFloatingPointPanel
-  Left = 852
-  Height = 322
-  Top = 191
-  Width = 353
+  Left = 458
+  Height = 350
+  Top = 132
+  Width = 397
   BorderStyle = bsSizeToolWin
   Caption = 'FPU'
-  ClientHeight = 322
-  ClientWidth = 353
+  ClientHeight = 350
+  ClientWidth = 397
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMode = pmAuto
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object PageControl1: TPageControl
     Left = 0
-    Height = 322
+    Height = 350
     Top = 0
-    Width = 353
+    Width = 397
     ActivePage = TabSheet2
     Align = alClient
     TabIndex = 0
     TabOrder = 0
     object TabSheet2: TTabSheet
       Caption = 'Extended'
-      ClientHeight = 294
-      ClientWidth = 345
+      ClientHeight = 316
+      ClientWidth = 389
       ImageIndex = 1
       object Panel1: TPanel
         Left = 0
         Height = 55
         Top = 0
-        Width = 345
+        Width = 389
         Align = alTop
         AutoSize = True
         BevelOuter = bvNone
         ClientHeight = 55
-        ClientWidth = 345
+        ClientWidth = 389
         TabOrder = 0
         object ComboBox3: TComboBox
           AnchorSideLeft.Control = Panel1
@@ -45,7 +46,7 @@ object frmFloatingPointPanel: TfrmFloatingPointPanel
           Top = 3
           Width = 169
           BorderSpacing.Top = 3
-          ItemHeight = 15
+          ItemHeight = 21
           ItemIndex = 1
           Items.Strings = (
             'FPURegisters'
@@ -65,7 +66,7 @@ object frmFloatingPointPanel: TfrmFloatingPointPanel
           Width = 169
           BorderSpacing.Top = 3
           BorderSpacing.Bottom = 3
-          ItemHeight = 15
+          ItemHeight = 21
           ItemIndex = 4
           Items.Strings = (
             'Byte'
@@ -84,9 +85,9 @@ object frmFloatingPointPanel: TfrmFloatingPointPanel
       end
       object Memo1: TMemo
         Left = 0
-        Height = 239
+        Height = 261
         Top = 55
-        Width = 345
+        Width = 389
         Align = alClient
         Font.CharSet = ANSI_CHARSET
         Font.Height = -13

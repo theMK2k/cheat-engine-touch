@@ -1,20 +1,21 @@
 object frmCapturedTimers: TfrmCapturedTimers
   Left = 502
-  Height = 234
+  Height = 246
   Top = 144
-  Width = 507
+  Width = 606
   Caption = 'Captured Timers'
-  ClientHeight = 234
-  ClientWidth = 507
+  ClientHeight = 246
+  ClientWidth = 606
+  Font.Height = -16
   OnClose = FormClose
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Label1: TLabel
     Left = 0
-    Height = 15
+    Height = 21
     Top = 0
-    Width = 507
+    Width = 606
     Align = alTop
     Caption = 'The following WM_TIMER messages have been received'
     ParentColor = False
@@ -22,8 +23,8 @@ object frmCapturedTimers: TfrmCapturedTimers
   object ListView1: TListView
     Left = 0
     Height = 164
-    Top = 15
-    Width = 507
+    Top = 21
+    Width = 606
     Align = alClient
     Columns = <    
       item
@@ -58,23 +59,23 @@ object frmCapturedTimers: TfrmCapturedTimers
   end
   object Panel1: TPanel
     Left = 0
-    Height = 55
-    Top = 179
-    Width = 507
+    Height = 61
+    Top = 185
+    Width = 606
     Align = alBottom
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 55
-    ClientWidth = 507
+    ClientHeight = 61
+    ClientWidth = 606
     TabOrder = 1
     object Button1: TButton
       AnchorSideLeft.Control = Panel1
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = Edit1
       AnchorSideTop.Side = asrBottom
-      Left = 216
+      Left = 266
       Height = 25
-      Top = 27
+      Top = 33
       Width = 75
       BorderSpacing.Bottom = 3
       Caption = 'Close'
@@ -87,9 +88,9 @@ object frmCapturedTimers: TfrmCapturedTimers
       AnchorSideTop.Control = Edit1
       AnchorSideTop.Side = asrCenter
       Left = 75
-      Height = 17
-      Top = 7
-      Width = 121
+      Height = 30
+      Top = 3
+      Width = 165
       BorderSpacing.Left = 5
       Caption = 'Send timer messages'
       OnClick = Button2Click
@@ -99,7 +100,7 @@ object frmCapturedTimers: TfrmCapturedTimers
       AnchorSideLeft.Control = Panel1
       AnchorSideTop.Control = Panel1
       Left = 5
-      Height = 23
+      Height = 29
       Top = 4
       Width = 65
       BorderSpacing.Left = 5

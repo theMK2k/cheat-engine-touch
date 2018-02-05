@@ -1,19 +1,20 @@
 object frmTracer: TfrmTracer
-  Left = 1034
+  Left = 418
   Height = 433
-  Top = 343
+  Top = 197
   Width = 439
   BorderIcons = [biSystemMenu]
   Caption = 'Tracer'
   ClientHeight = 413
   ClientWidth = 439
+  Font.Height = -21
   Menu = MainMenu1
   OnClose = FormClose
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object Splitter1: TSplitter
     Left = 208
     Height = 413
@@ -31,7 +32,7 @@ object frmTracer: TfrmTracer
     BevelOuter = bvNone
     ClientHeight = 413
     ClientWidth = 227
-    Font.Height = -13
+    Font.Height = -16
     Font.Name = 'Courier New'
     ParentFont = False
     TabOrder = 0
@@ -43,14 +44,15 @@ object frmTracer: TfrmTracer
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 76
-      Height = 25
-      Top = 385
+      Height = 31
+      Top = 379
       Width = 75
       Anchors = [akLeft, akBottom]
       AutoSize = True
       BorderSpacing.Bottom = 3
       Caption = 'Close'
       Constraints.MinWidth = 75
+      Font.Height = -16
       OnClick = Button1Click
       ParentFont = False
       TabOrder = 0
@@ -73,9 +75,9 @@ object frmTracer: TfrmTracer
       AnchorSideTop.Control = lblInstruction
       AnchorSideTop.Side = asrBottom
       Left = 5
-      Height = 16
+      Height = 18
       Top = 18
-      Width = 136
+      Width = 170
       BorderSpacing.Top = 2
       Caption = 'Accesses Address:'
       ParentColor = False
@@ -85,23 +87,23 @@ object frmTracer: TfrmTracer
       AnchorSideTop.Control = lblAddressed
       AnchorSideTop.Side = asrBottom
       Left = 5
-      Height = 192
-      Top = 34
-      Width = 96
+      Height = 210
+      Top = 36
+      Width = 120
       AutoSize = True
       BevelOuter = bvNone
       ChildSizing.VerticalSpacing = 6
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 1
-      ClientHeight = 192
-      ClientWidth = 96
+      ClientHeight = 210
+      ClientWidth = 120
       TabOrder = 1
       object EAXLabel: TLabel
         Cursor = crHandPoint
         Left = 0
-        Height = 16
+        Height = 18
         Top = 0
-        Width = 96
+        Width = 120
         Caption = 'EAX 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -111,9 +113,9 @@ object frmTracer: TfrmTracer
         Tag = 1
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 22
-        Width = 96
+        Height = 18
+        Top = 24
+        Width = 120
         Caption = 'EBX 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -123,9 +125,9 @@ object frmTracer: TfrmTracer
         Tag = 2
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 44
-        Width = 96
+        Height = 18
+        Top = 48
+        Width = 120
         Caption = 'ECX 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -135,9 +137,9 @@ object frmTracer: TfrmTracer
         Tag = 3
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 66
-        Width = 96
+        Height = 18
+        Top = 72
+        Width = 120
         Caption = 'EDX 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -147,9 +149,9 @@ object frmTracer: TfrmTracer
         Tag = 4
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 88
-        Width = 96
+        Height = 18
+        Top = 96
+        Width = 120
         Caption = 'ESI 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -159,9 +161,9 @@ object frmTracer: TfrmTracer
         Tag = 5
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 110
-        Width = 96
+        Height = 18
+        Top = 120
+        Width = 120
         Caption = 'EDI 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -171,9 +173,9 @@ object frmTracer: TfrmTracer
         Tag = 6
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 132
-        Width = 96
+        Height = 18
+        Top = 144
+        Width = 120
         Caption = 'EBP 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -183,9 +185,9 @@ object frmTracer: TfrmTracer
         Tag = 7
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 154
-        Width = 96
+        Height = 18
+        Top = 168
+        Width = 120
         Caption = 'ESP 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -195,9 +197,9 @@ object frmTracer: TfrmTracer
         Tag = 8
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 176
-        Width = 96
+        Height = 18
+        Top = 192
+        Width = 120
         Caption = 'EIP 00000000'
         ParentColor = False
         OnDblClick = EAXLabelDblClick
@@ -209,25 +211,25 @@ object frmTracer: TfrmTracer
       AnchorSideTop.Control = Panel4
       AnchorSideTop.Side = asrBottom
       Left = 5
-      Height = 126
-      Top = 256
-      Width = 56
+      Height = 138
+      Top = 276
+      Width = 70
       AutoSize = True
       BorderSpacing.Top = 30
       BevelOuter = bvNone
       ChildSizing.VerticalSpacing = 6
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 1
-      ClientHeight = 126
-      ClientWidth = 56
+      ClientHeight = 138
+      ClientWidth = 70
       TabOrder = 2
       object CSLabel: TLabel
         Tag = 9
         Cursor = crHandPoint
         Left = 0
-        Height = 16
+        Height = 18
         Top = 0
-        Width = 56
+        Width = 70
         Caption = 'CS 0000'
         ParentColor = False
       end
@@ -235,9 +237,9 @@ object frmTracer: TfrmTracer
         Tag = 10
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 22
-        Width = 56
+        Height = 18
+        Top = 24
+        Width = 70
         Caption = 'SS 0000'
         ParentColor = False
       end
@@ -245,9 +247,9 @@ object frmTracer: TfrmTracer
         Tag = 11
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 44
-        Width = 56
+        Height = 18
+        Top = 48
+        Width = 70
         Caption = 'DS 0000'
         ParentColor = False
       end
@@ -255,9 +257,9 @@ object frmTracer: TfrmTracer
         Tag = 12
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 66
-        Width = 56
+        Height = 18
+        Top = 72
+        Width = 70
         Caption = 'ES 0000'
         ParentColor = False
       end
@@ -265,9 +267,9 @@ object frmTracer: TfrmTracer
         Tag = 13
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 88
-        Width = 56
+        Height = 18
+        Top = 96
+        Width = 70
         Caption = 'FS 0000'
         ParentColor = False
       end
@@ -275,9 +277,9 @@ object frmTracer: TfrmTracer
         Tag = 14
         Cursor = crHandPoint
         Left = 0
-        Height = 16
-        Top = 110
-        Width = 56
+        Height = 18
+        Top = 120
+        Width = 70
         Caption = 'GS 0000'
         ParentColor = False
       end
@@ -288,10 +290,10 @@ object frmTracer: TfrmTracer
       AnchorSideTop.Control = Panel4
       AnchorSideRight.Control = Panel1
       AnchorSideRight.Side = asrBottom
-      Left = 185
-      Height = 148
-      Top = 34
-      Width = 32
+      Left = 177
+      Height = 162
+      Top = 36
+      Width = 40
       Anchors = [akTop, akRight]
       AutoSize = True
       BorderSpacing.Right = 10
@@ -299,62 +301,62 @@ object frmTracer: TfrmTracer
       ChildSizing.VerticalSpacing = 6
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 1
-      ClientHeight = 148
-      ClientWidth = 32
+      ClientHeight = 162
+      ClientWidth = 40
       TabOrder = 3
       object cflabel: TLabel
         Left = 0
-        Height = 16
+        Height = 18
         Top = 0
-        Width = 32
+        Width = 40
         Caption = 'CF 0'
         ParentColor = False
       end
       object pflabel: TLabel
         Left = 0
-        Height = 16
-        Top = 22
-        Width = 32
+        Height = 18
+        Top = 24
+        Width = 40
         Caption = 'PF 0'
         ParentColor = False
       end
       object aflabel: TLabel
         Left = 0
-        Height = 16
-        Top = 44
-        Width = 32
+        Height = 18
+        Top = 48
+        Width = 40
         Caption = 'AF 0'
         ParentColor = False
       end
       object zflabel: TLabel
         Left = 0
-        Height = 16
-        Top = 66
-        Width = 32
+        Height = 18
+        Top = 72
+        Width = 40
         Caption = 'ZF 0'
         ParentColor = False
       end
       object sflabel: TLabel
         Left = 0
-        Height = 16
-        Top = 88
-        Width = 32
+        Height = 18
+        Top = 96
+        Width = 40
         Caption = 'SF 0'
         ParentColor = False
       end
       object dflabel: TLabel
         Left = 0
-        Height = 16
-        Top = 110
-        Width = 32
+        Height = 18
+        Top = 120
+        Width = 40
         Caption = 'DF 0'
         ParentColor = False
       end
       object oflabel: TLabel
         Left = 0
-        Height = 16
-        Top = 132
-        Width = 32
+        Height = 18
+        Top = 144
+        Width = 40
         Caption = 'OF 0'
         ParentColor = False
       end
@@ -427,13 +429,13 @@ object frmTracer: TfrmTracer
     TabOrder = 2
     object pnlSearch: TPanel
       Left = 0
-      Height = 48
-      Top = 365
+      Height = 54
+      Top = 359
       Width = 208
       Align = alBottom
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 48
+      ClientHeight = 54
       ClientWidth = 208
       TabOrder = 0
       Visible = False
@@ -441,15 +443,16 @@ object frmTracer: TfrmTracer
         AnchorSideLeft.Control = pnlSearch
         AnchorSideLeft.Side = asrCenter
         AnchorSideTop.Control = pnlSearch
-        Left = 60
-        Height = 25
+        Left = 50
+        Height = 31
         Top = 2
-        Width = 88
+        Width = 109
         AutoSize = True
         BorderSpacing.Top = 2
         BorderSpacing.Bottom = 2
         Caption = 'Stop Search'
         Constraints.MinWidth = 75
+        Font.Height = -16
         OnClick = btnStopSearchClick
         ParentFont = False
         TabOrder = 0
@@ -464,7 +467,7 @@ object frmTracer: TfrmTracer
         AnchorSideBottom.Side = asrBottom
         Left = 0
         Height = 19
-        Top = 29
+        Top = 35
         Width = 208
         Anchors = [akTop, akLeft, akRight, akBottom]
         AutoSize = True
@@ -484,11 +487,10 @@ object frmTracer: TfrmTracer
     end
     object lvTracer: TTreeView
       Left = 0
-      Height = 365
+      Height = 359
       Top = 0
       Width = 208
       Align = alClient
-      DefaultItemHeight = 18
       ExpandSignType = tvestPlusMinus
       HideSelection = False
       PopupMenu = pmTracer

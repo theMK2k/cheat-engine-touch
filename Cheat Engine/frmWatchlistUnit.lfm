@@ -1,23 +1,24 @@
 object frmWatchlist: TfrmWatchlist
   Left = 466
-  Height = 169
+  Height = 202
   Top = 202
-  Width = 441
+  Width = 482
   BorderStyle = bsSizeToolWin
   Caption = 'Watch list'
-  ClientHeight = 169
-  ClientWidth = 441
+  ClientHeight = 202
+  ClientWidth = 482
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object lvWatchlist: TListView
     Left = 0
-    Height = 169
+    Height = 202
     Top = 0
-    Width = 441
+    Width = 482
     Align = alClient
     AutoWidthLastColumn = True
     Columns = <    
@@ -26,9 +27,8 @@ object frmWatchlist: TfrmWatchlist
         Width = 114
       end    
       item
-        AutoSize = True
         Caption = 'Value'
-        Width = 323
+        Width = 364
       end>
     ColumnClick = False
     HideSelection = False

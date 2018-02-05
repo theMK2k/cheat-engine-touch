@@ -1,27 +1,28 @@
 object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
-  Left = 757
-  Height = 332
-  Top = 333
-  Width = 396
+  Left = 442
+  Height = 389
+  Top = 123
+  Width = 498
   AutoSize = True
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Direct3D Hook Options'
-  ClientHeight = 332
-  ClientWidth = 396
+  ClientHeight = 389
+  ClientWidth = 498
+  Font.Height = -16
   OnCreate = FormCreate
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Button4: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Panel1
     AnchorSideTop.Side = asrBottom
-    Left = 161
-    Height = 25
-    Top = 300
+    Left = 212
+    Height = 31
+    Top = 354
     Width = 75
     AutoSize = True
     BorderSpacing.Top = 4
@@ -35,23 +36,23 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     Left = 0
-    Height = 296
+    Height = 350
     Top = 0
-    Width = 393
+    Width = 477
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 296
-    ClientWidth = 393
+    ClientHeight = 350
+    ClientWidth = 477
     TabOrder = 1
     object Button2: TButton
       AnchorSideLeft.Control = Panel2
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = imgPreview
       AnchorSideTop.Side = asrBottom
-      Left = 199
-      Height = 25
-      Top = 227
-      Width = 150
+      Left = 226
+      Height = 31
+      Top = 263
+      Width = 187
       AutoSize = True
       Caption = 'Set background picture'
       Constraints.MinWidth = 150
@@ -63,9 +64,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Label3
       AnchorSideTop.Side = asrBottom
-      Left = 199
+      Left = 226
       Height = 121
-      Top = 106
+      Top = 142
       Width = 192
     end
     object cbStretch: TCheckBox
@@ -73,11 +74,11 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = Button2
       AnchorSideTop.Side = asrBottom
-      Left = 199
-      Height = 19
+      Left = 226
+      Height = 25
       Hint = 'If selected the background image will get resized so that cheat entries will fit inside it'#13#10'This is useful if you pick a 1x1 pixel size bitmap that you wish to stretch'
-      Top = 252
-      Width = 170
+      Top = 294
+      Width = 216
       Caption = 'Scale the background image'
       OnChange = cbStretchChange
       ParentShowHint = False
@@ -89,9 +90,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = cbStretch
       AnchorSideTop.Side = asrBottom
-      Left = 199
-      Height = 25
-      Top = 271
+      Left = 226
+      Height = 31
+      Top = 319
       Width = 150
       AutoSize = True
       Caption = 'Set Font'
@@ -102,10 +103,10 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
     object Label2: TLabel
       AnchorSideLeft.Control = Panel2
       AnchorSideLeft.Side = asrBottom
-      Left = 201
-      Height = 15
+      Left = 228
+      Height = 21
       Top = 0
-      Width = 43
+      Width = 56
       BorderSpacing.Left = 2
       Caption = 'Position'
       ParentColor = False
@@ -115,10 +116,10 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = pnlPosition
       AnchorSideTop.Side = asrBottom
-      Left = 199
-      Height = 19
-      Top = 72
-      Width = 194
+      Left = 226
+      Height = 25
+      Top = 96
+      Width = 251
       Caption = 'Allow user to drag trainer around'
       TabOrder = 3
       Visible = False
@@ -173,10 +174,10 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = cbAllowDrag
       AnchorSideTop.Side = asrBottom
-      Left = 199
-      Height = 15
-      Top = 91
-      Width = 107
+      Left = 226
+      Height = 21
+      Top = 121
+      Width = 138
       Caption = 'Background picture:'
       ParentColor = False
     end
@@ -187,22 +188,22 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = imgPreview
       AnchorSideBottom.Side = asrBottom
-      Left = 199
+      Left = 226
       Height = 121
-      Top = 106
+      Top = 142
       Width = 192
       Anchors = [akTop, akLeft, akRight, akBottom]
       Transparent = True
     end
     object Panel2: TPanel
       Left = 0
-      Height = 260
+      Height = 320
       Top = 0
-      Width = 199
+      Width = 226
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 260
-      ClientWidth = 199
+      ClientHeight = 320
+      ClientWidth = 226
       TabOrder = 4
       object cbUseD3DKeys: TCheckBox
         AnchorSideLeft.Control = Panel2
@@ -225,9 +226,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = edtd3dkeys
         AnchorSideTop.Side = asrBottom
         Left = 8
-        Height = 15
-        Top = 46
-        Width = 71
+        Height = 21
+        Top = 52
+        Width = 93
         Caption = 'Transparency'
         ParentColor = False
       end
@@ -239,8 +240,8 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideRight.Side = asrBottom
         Left = 8
         Height = 25
-        Top = 61
-        Width = 191
+        Top = 73
+        Width = 218
         Frequency = 5
         Max = 100
         PageSize = 10
@@ -253,7 +254,7 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = cbUseD3DKeys
         AnchorSideTop.Side = asrBottom
         Left = 8
-        Height = 23
+        Height = 29
         Top = 23
         Width = 112
         OnKeyDown = edtd3dkeysKeyDown
@@ -266,7 +267,7 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = edtd3dkeys
         AnchorSideTop.Side = asrCenter
         Left = 122
-        Height = 25
+        Height = 31
         Top = 22
         Width = 75
         AutoSize = True
@@ -282,9 +283,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = TrackBar1
         AnchorSideTop.Side = asrBottom
         Left = 8
-        Height = 19
-        Top = 90
-        Width = 148
+        Height = 25
+        Top = 102
+        Width = 187
         BorderSpacing.Top = 4
         Caption = 'Cheats have checkboxes'
         TabOrder = 4
@@ -294,9 +295,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = cbHasCheckbox
         AnchorSideTop.Side = asrBottom
         Left = 8
-        Height = 19
-        Top = 111
-        Width = 93
+        Height = 25
+        Top = 129
+        Width = 117
         BorderSpacing.Top = 2
         Caption = 'Show hotkeys'
         Checked = True
@@ -310,9 +311,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideRight.Control = Panel2
         AnchorSideRight.Side = asrBottom
         Left = 8
-        Height = 23
-        Top = 149
-        Width = 183
+        Height = 29
+        Top = 179
+        Width = 210
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 8
         TabOrder = 6
@@ -323,9 +324,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = cbShowHotkeys
         AnchorSideTop.Side = asrBottom
         Left = 8
-        Height = 15
-        Top = 134
-        Width = 165
+        Height = 21
+        Top = 158
+        Width = 218
         BorderSpacing.Top = 4
         Caption = 'Distance between lines in pixels'
         ParentColor = False
@@ -335,9 +336,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = edtDistanceBetweenLines
         AnchorSideTop.Side = asrBottom
         Left = 8
-        Height = 15
-        Top = 176
-        Width = 119
+        Height = 21
+        Top = 212
+        Width = 154
         BorderSpacing.Top = 4
         Caption = 'Text distance from top'
         ParentColor = False
@@ -349,9 +350,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideRight.Control = Panel2
         AnchorSideRight.Side = asrBottom
         Left = 8
-        Height = 23
-        Top = 191
-        Width = 183
+        Height = 29
+        Top = 233
+        Width = 210
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 8
         TabOrder = 7
@@ -364,9 +365,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideRight.Control = Panel2
         AnchorSideRight.Side = asrBottom
         Left = 8
-        Height = 23
-        Top = 233
-        Width = 183
+        Height = 29
+        Top = 287
+        Width = 210
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Right = 8
         BorderSpacing.Bottom = 4
@@ -378,9 +379,9 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
         AnchorSideTop.Control = edtDistanceFromTop
         AnchorSideTop.Side = asrBottom
         Left = 8
-        Height = 15
-        Top = 218
-        Width = 136
+        Height = 21
+        Top = 266
+        Width = 178
         BorderSpacing.Top = 4
         Caption = 'Text distance from border'
         ParentColor = False
@@ -390,59 +391,59 @@ object frmD3DTrainerGeneratorOptions: TfrmD3DTrainerGeneratorOptions
       AnchorSideLeft.Control = Label2
       AnchorSideTop.Control = Label2
       AnchorSideTop.Side = asrBottom
-      Left = 201
-      Height = 57
-      Top = 15
-      Width = 168
+      Left = 228
+      Height = 75
+      Top = 21
+      Width = 205
       AutoSize = True
       BevelOuter = bvNone
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 2
-      ClientHeight = 57
-      ClientWidth = 168
+      ClientHeight = 75
+      ClientWidth = 205
       TabOrder = 5
       object rbTopLeft: TRadioButton
         AnchorSideLeft.Side = asrBottom
         Left = 0
-        Height = 19
+        Height = 25
         Top = 0
-        Width = 80
+        Width = 97
         Caption = 'Top left'
         Checked = True
         TabOrder = 0
         TabStop = True
       end
       object rbTopRight: TRadioButton
-        Left = 80
-        Height = 19
+        Left = 97
+        Height = 25
         Top = 0
-        Width = 88
+        Width = 108
         Caption = 'Top right'
         TabOrder = 1
       end
       object rbBottomLeft: TRadioButton
         AnchorSideLeft.Side = asrBottom
         Left = 0
-        Height = 19
-        Top = 19
-        Width = 80
+        Height = 25
+        Top = 25
+        Width = 97
         Caption = 'Bottom left'
         TabOrder = 2
       end
       object rbBottomRight: TRadioButton
-        Left = 80
-        Height = 19
-        Top = 19
-        Width = 88
+        Left = 97
+        Height = 25
+        Top = 25
+        Width = 108
         Caption = 'Bottom right'
         TabOrder = 3
       end
       object rbCenter: TRadioButton
         AnchorSideLeft.Side = asrBottom
         Left = 0
-        Height = 19
-        Top = 38
-        Width = 80
+        Height = 25
+        Top = 50
+        Width = 97
         Caption = 'Center'
         TabOrder = 4
       end

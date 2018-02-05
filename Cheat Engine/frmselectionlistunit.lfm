@@ -1,21 +1,22 @@
 object frmSelectionList: TfrmSelectionList
-  Left = 277
-  Height = 232
-  Top = 235
-  Width = 313
+  Left = 386
+  Height = 264
+  Top = 167
+  Width = 374
   BorderIcons = [biSystemMenu]
   Caption = 'title'
-  ClientHeight = 232
-  ClientWidth = 313
+  ClientHeight = 264
+  ClientWidth = 374
+  Font.Height = -16
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.8.0.6'
   object Label1: TLabel
     Left = 0
-    Height = 15
+    Height = 21
     Top = 0
-    Width = 313
+    Width = 374
     Align = alTop
     Caption = 'caption'
     ParentColor = False
@@ -23,9 +24,9 @@ object frmSelectionList: TfrmSelectionList
   end
   object ListBox1: TListBox
     Left = 0
-    Height = 161
-    Top = 38
-    Width = 313
+    Height = 175
+    Top = 50
+    Width = 374
     Align = alClient
     ItemHeight = 0
     OnDblClick = ListBox1DblClick
@@ -34,19 +35,19 @@ object frmSelectionList: TfrmSelectionList
   end
   object Panel1: TPanel
     Left = 0
-    Height = 33
-    Top = 199
-    Width = 313
+    Height = 39
+    Top = 225
+    Width = 374
     Align = alBottom
     AutoSize = True
-    ClientHeight = 33
-    ClientWidth = 313
+    ClientHeight = 39
+    ClientWidth = 374
     TabOrder = 1
     object btnOK: TButton
-      Left = 124
-      Height = 25
+      Left = 149
+      Height = 31
       Top = 4
-      Width = 66
+      Width = 79
       Anchors = [akTop]
       AutoSize = True
       BorderSpacing.Top = 3
@@ -59,9 +60,9 @@ object frmSelectionList: TfrmSelectionList
   end
   object Edit1: TEdit
     Left = 0
-    Height = 23
-    Top = 15
-    Width = 313
+    Height = 29
+    Top = 21
+    Width = 374
     Align = alTop
     OnChange = Edit1Change
     OnKeyPress = Edit1KeyPress

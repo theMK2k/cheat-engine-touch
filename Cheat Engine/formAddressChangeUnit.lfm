@@ -1,27 +1,28 @@
 object formAddressChange: TformAddressChange
-  Left = 503
-  Height = 279
-  Top = 233
-  Width = 201
+  Left = 356
+  Height = 323
+  Top = 169
+  Width = 232
   AutoSize = True
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Change address'
-  ClientHeight = 279
-  ClientWidth = 201
+  ClientHeight = 323
+  ClientWidth = 232
+  Font.Height = -16
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
   PopupMode = pmAuto
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Label1: TLabel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     Left = 8
-    Height = 15
+    Height = 21
     Top = 0
-    Width = 45
+    Width = 59
     BorderSpacing.Left = 8
     Caption = 'Address:'
     ParentColor = False
@@ -31,8 +32,8 @@ object formAddressChange: TformAddressChange
     AnchorSideTop.Control = Label1
     AnchorSideTop.Side = asrBottom
     Left = 8
-    Height = 23
-    Top = 15
+    Height = 29
+    Top = 21
     Width = 112
     OnChange = editAddressChange
     OnKeyPress = editAddressKeyPress
@@ -43,8 +44,8 @@ object formAddressChange: TformAddressChange
     AnchorSideTop.Control = cbPointer
     AnchorSideTop.Side = asrBottom
     Left = 8
-    Height = 25
-    Top = 224
+    Height = 31
+    Top = 284
     Width = 80
     AutoSize = True
     BorderSpacing.Left = 8
@@ -64,8 +65,8 @@ object formAddressChange: TformAddressChange
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 96
-    Height = 25
-    Top = 224
+    Height = 31
+    Top = 284
     Width = 80
     AutoSize = True
     BorderSpacing.Left = 8
@@ -82,9 +83,9 @@ object formAddressChange: TformAddressChange
     AnchorSideTop.Control = pnlExtra
     AnchorSideTop.Side = asrBottom
     Left = 8
-    Height = 19
-    Top = 205
-    Width = 58
+    Height = 25
+    Top = 259
+    Width = 70
     Caption = 'Pointer'
     OnChange = cbPointerClick
     TabOrder = 4
@@ -97,11 +98,11 @@ object formAddressChange: TformAddressChange
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 23
-    Top = 95
-    Width = 185
+    Top = 125
+    Width = 216
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Right = 8
-    ItemHeight = 15
+    ItemHeight = 21
     ItemIndex = 3
     Items.Strings = (
       'Binary'
@@ -124,22 +125,22 @@ object formAddressChange: TformAddressChange
     AnchorSideTop.Control = cbvarType
     AnchorSideTop.Side = asrBottom
     Left = 8
-    Height = 87
-    Top = 118
-    Width = 190
+    Height = 111
+    Top = 148
+    Width = 219
     AutoSize = True
     BevelOuter = bvNone
-    ClientHeight = 87
-    ClientWidth = 190
+    ClientHeight = 111
+    ClientWidth = 219
     TabOrder = 3
     Visible = False
     object cbunicode: TCheckBox
       AnchorSideTop.Control = edtSize
       AnchorSideTop.Side = asrCenter
       Left = 48
-      Height = 19
-      Top = 17
-      Width = 64
+      Height = 25
+      Top = 23
+      Width = 77
       Caption = 'Unicode'
       OnChange = cbunicodeChange
       TabOrder = 0
@@ -148,8 +149,8 @@ object formAddressChange: TformAddressChange
       AnchorSideTop.Control = lengthlabel
       AnchorSideTop.Side = asrBottom
       Left = 0
-      Height = 23
-      Top = 15
+      Height = 29
+      Top = 21
       Width = 45
       TabOrder = 1
       Text = '10'
@@ -158,9 +159,9 @@ object formAddressChange: TformAddressChange
       AnchorSideLeft.Control = pnlExtra
       AnchorSideTop.Control = pnlExtra
       Left = 0
-      Height = 15
+      Height = 21
       Top = 0
-      Width = 37
+      Width = 48
       Caption = 'Length'
       ParentColor = False
     end
@@ -169,12 +170,12 @@ object formAddressChange: TformAddressChange
       AnchorSideTop.Control = edtSize
       AnchorSideTop.Side = asrBottom
       Left = 0
-      Height = 49
-      Top = 38
+      Height = 61
+      Top = 50
       Width = 160
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 49
+      ClientHeight = 61
       ClientWidth = 160
       TabOrder = 2
       Visible = False
@@ -183,9 +184,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 0
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '0'
         ParentColor = False
       end
@@ -194,9 +195,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 20
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '1'
         ParentColor = False
       end
@@ -205,9 +206,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 40
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '2'
         ParentColor = False
       end
@@ -216,9 +217,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 60
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '3'
         ParentColor = False
       end
@@ -227,9 +228,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 80
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '4'
         ParentColor = False
       end
@@ -238,9 +239,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 100
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '5'
         ParentColor = False
       end
@@ -249,9 +250,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 120
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '6'
         ParentColor = False
       end
@@ -260,9 +261,9 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Control = Label2
         AnchorSideTop.Side = asrBottom
         Left = 140
-        Height = 15
-        Top = 15
-        Width = 6
+        Height = 21
+        Top = 21
+        Width = 9
         Caption = '7'
         ParentColor = False
       end
@@ -270,9 +271,9 @@ object formAddressChange: TformAddressChange
         AnchorSideLeft.Control = pnlBitinfo
         AnchorSideTop.Control = pnlBitinfo
         Left = 0
-        Height = 15
+        Height = 21
         Top = 0
-        Width = 41
+        Width = 54
         Caption = 'Startbit:'
         ParentColor = False
       end
@@ -281,7 +282,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 0
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         Checked = True
         TabOrder = 0
@@ -294,7 +295,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 20
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         TabOrder = 1
       end
@@ -305,7 +306,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 40
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         TabOrder = 2
       end
@@ -316,7 +317,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 60
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         TabOrder = 3
       end
@@ -327,7 +328,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 80
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         TabOrder = 4
       end
@@ -338,7 +339,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 100
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         TabOrder = 5
       end
@@ -349,7 +350,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 120
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         TabOrder = 6
       end
@@ -360,7 +361,7 @@ object formAddressChange: TformAddressChange
         AnchorSideTop.Side = asrBottom
         Left = 140
         Height = 19
-        Top = 30
+        Top = 42
         Width = 20
         TabOrder = 7
       end
@@ -369,10 +370,10 @@ object formAddressChange: TformAddressChange
       AnchorSideLeft.Control = cbunicode
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = cbunicode
-      Left = 116
-      Height = 19
-      Top = 17
-      Width = 74
+      Left = 129
+      Height = 25
+      Top = 23
+      Width = 90
       BorderSpacing.Left = 4
       Caption = 'Codepage'
       OnChange = cbCodePageChange
@@ -385,9 +386,9 @@ object formAddressChange: TformAddressChange
     AnchorSideTop.Control = editAddress
     AnchorSideTop.Side = asrCenter
     Left = 120
-    Height = 15
-    Top = 19
-    Width = 37
+    Height = 21
+    Top = 25
+    Width = 50
     BorderSpacing.Right = 5
     Caption = '=Value'
     ParentColor = False
@@ -399,9 +400,9 @@ object formAddressChange: TformAddressChange
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 8
-    Height = 23
-    Top = 55
-    Width = 185
+    Height = 29
+    Top = 73
+    Width = 216
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Right = 8
     TabOrder = 1
@@ -411,9 +412,9 @@ object formAddressChange: TformAddressChange
     AnchorSideTop.Control = editAddress
     AnchorSideTop.Side = asrBottom
     Left = 8
-    Height = 15
-    Top = 40
-    Width = 60
+    Height = 21
+    Top = 52
+    Width = 79
     BorderSpacing.Top = 2
     Caption = 'Description'
     ParentColor = False
@@ -423,23 +424,23 @@ object formAddressChange: TformAddressChange
     AnchorSideTop.Control = editDescription
     AnchorSideTop.Side = asrBottom
     Left = 8
-    Height = 15
-    Top = 80
-    Width = 26
+    Height = 21
+    Top = 104
+    Width = 33
     BorderSpacing.Top = 2
     Caption = 'Type'
     ParentColor = False
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    left = 136
-    top = 8
+    left = 173
+    top = 288
   end
   object Timer2: TTimer
     Interval = 1
     OnTimer = Timer2Timer
-    left = 64
-    top = 8
+    left = 136
+    top = 288
   end
   object pmOffset: TPopupMenu
     OnPopup = pmOffsetPopup

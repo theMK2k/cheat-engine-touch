@@ -1,29 +1,30 @@
 object frmSnapshotHandler: TfrmSnapshotHandler
-  Left = 844
-  Height = 264
-  Top = 359
-  Width = 674
+  Left = 413
+  Height = 318
+  Top = 147
+  Width = 723
   Caption = 'Snapshot handler'
-  ClientHeight = 244
-  ClientWidth = 674
+  ClientHeight = 298
+  ClientWidth = 723
+  Font.Height = -16
   Menu = MainMenu1
   OnCreate = FormCreate
   PopupMode = pmAuto
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.6'
   object Panel2: TPanel
     Left = 0
-    Height = 164
+    Height = 194
     Top = 0
-    Width = 674
+    Width = 723
     Align = alClient
-    ClientHeight = 164
-    ClientWidth = 674
+    ClientHeight = 194
+    ClientWidth = 723
     TabOrder = 0
     object ScrollBar1: TScrollBar
       Left = 1
       Height = 17
-      Top = 146
-      Width = 672
+      Top = 176
+      Width = 721
       Align = alBottom
       PageSize = 0
       TabOrder = 0
@@ -31,9 +32,9 @@ object frmSnapshotHandler: TfrmSnapshotHandler
     end
     object PaintBox1: TPaintBox
       Left = 1
-      Height = 145
+      Height = 175
       Top = 1
-      Width = 672
+      Width = 721
       Align = alClient
       OnMouseDown = PaintBox1MouseDown
       OnPaint = PaintBox1Paint
@@ -41,20 +42,20 @@ object frmSnapshotHandler: TfrmSnapshotHandler
   end
   object Panel1: TPanel
     Left = 0
-    Height = 80
-    Top = 164
-    Width = 674
+    Height = 104
+    Top = 194
+    Width = 723
     Align = alBottom
     AutoSize = True
-    ClientHeight = 80
-    ClientWidth = 674
+    ClientHeight = 104
+    ClientWidth = 723
     TabOrder = 1
     OnClick = Panel1Click
     object rbStack: TRadioButton
       Left = 1
-      Height = 19
-      Top = 16
-      Width = 672
+      Height = 25
+      Top = 22
+      Width = 721
       Align = alTop
       Caption = 'Stack'
       Checked = True
@@ -64,9 +65,9 @@ object frmSnapshotHandler: TfrmSnapshotHandler
     end
     object rbCB: TRadioButton
       Left = 1
-      Height = 19
-      Top = 35
-      Width = 672
+      Height = 25
+      Top = 47
+      Width = 721
       Align = alTop
       Caption = 'ConstantBuffer'
       Enabled = False
@@ -76,9 +77,9 @@ object frmSnapshotHandler: TfrmSnapshotHandler
       AnchorSideTop.Control = rbCB
       AnchorSideTop.Side = asrBottom
       Left = 1
-      Height = 25
-      Top = 54
-      Width = 75
+      Height = 31
+      Top = 72
+      Width = 90
       AutoSize = True
       Caption = 'Compare'
       Constraints.MinWidth = 75
@@ -88,9 +89,9 @@ object frmSnapshotHandler: TfrmSnapshotHandler
     end
     object lblCompare: TLabel
       Left = 1
-      Height = 15
+      Height = 21
       Top = 1
-      Width = 672
+      Width = 721
       Align = alTop
       Caption = 'Compare selected snapshots'
       Enabled = False

@@ -14,7 +14,7 @@ interface
 uses windows, FileUtil, LCLIntf,sysutils, classes,ComCtrls,dialogs, NewKernelHandler,math,
      SyncObjs, windows7taskbar,SaveFirstScan, savedscanhandler, autoassembler,
      symbolhandler, CEFuncProc,shellapi, customtypehandler,lua,lualib,lauxlib,
-     LuaHandler, fileaccess, groupscancommandparser, commonTypeDefs, LazUTF8, forms;
+     LuaHandler, fileaccess, groupscancommandparser, commonTypeDefs, LazUTF8, forms, LazFileUtils;
 {$define customtypeimplemented}
 {$endif}
 
@@ -6443,7 +6443,7 @@ begin
         deletefile(OwningMemScan.ScanresultFolder+'ADDRESSES.UNDO');
         renamefile(OwningMemScan.ScanresultFolder+'ADDRESSES.TMP',OwningMemScan.ScanresultFolder+'ADDRESSES.UNDO');
         if not renamefile(scanners[0].Addressfilename, OwningMemScan.ScanresultFolder+'ADDRESSES.TMP') then
-          RenameFileUTF8(scanners[0].Addressfilename, OwningMemScan.ScanresultFolder+'ADDRESSES.TMP');
+           RenameFileUTF8(scanners[0].Addressfilename, OwningMemScan.ScanresultFolder+'ADDRESSES.TMP');
 
         //memory
         deletefile(OwningMemScan.ScanresultFolder+'MEMORY.UNDO');
