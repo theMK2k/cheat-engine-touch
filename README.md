@@ -1,18 +1,12 @@
 # cheat-engine
 Cheat Engine. A development environment focused on modding games and applications for personal use.
 
-
-For the latest version:
-[![Recent CE Download](./molumen-download-button-1-800px.png)](https://github.com/cheat-engine/cheat-engine/releases/download/6.7/CheatEngine67.exe)
-
-For older versions, check out https://github.com/cheat-engine/cheat-engine/releases
+# cheat-engine-touch
+Cheat Engine Touch is a UI rework by MK2k in order to use Cheat Engine on smaller Windows devices such as the GPD Win.
 
 
-The forum is up/down depending on DDoS attacks. In the chance it works, you can read posts at http://forum.cheatengine.org/
 
-Alternate websites:
-http://reddit.com/r/cheatengine
+--------------------
+Follow cheat engine on twitter: https://twitter.com/_cheatengine
 
-http://fearlessrevolution.com/index.php
-
-You can also follow cheat engine on twitter: https://twitter.com/_cheatengine
+Follow MK2k on twitter: https://twitter.com/theMK2k
